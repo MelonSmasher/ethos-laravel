@@ -45,13 +45,17 @@ class EthosService
         $baseURL = $this->validate($baseURL, 'https://integrate.elluciancloud.com');
         $erpBackend = $this->validate($erpBackend, ErpBackend::COLLEAGUE);
 
-        $ethos = Cache::get('melonsmasher_ethos_session', null);
-        if (empty($ethos)) {
+        // Get the JWT from the cache
+        $ethosJWT = Cache::get('melonsmasher_ethos_session', null);
+        // If we got a JWT set a new Ethos session using that JWT
+        if (!empty($ethosJWT)) $ethos = new Ethos($secret, $baseURL, $erpBackend, $ethosJWT);
+        // If we don't have a JWT create a new Ethos session and cache the JWT
+        if (empty($ethosJWT)) {
             $ethos = new Ethos($secret, $baseURL, $erpBackend);
-            $ethos = serialize($ethos);
-            Cache::put('melonsmasher_ethos_session', 240, $ethos);
+            Cache::put('melonsmasher_ethos_session', 240, $ethos->getJWT());
         }
-        $this->ethos = unserialize($ethos);
+        // Set the Ethos session object
+        $this->ethos = $ethos;
     }
 
     /**

@@ -1,62 +1,61 @@
 <?php
 
 
-    namespace MelonSmasher\EthosPHP\Laravel\Traits\Foundation;
+namespace MelonSmasher\EthosPHP\Laravel\Traits\Foundation;
 
 
-    use MelonSmasher\EthosPHP\Foundation\MappingSettingsClient;
+use MelonSmasher\EthosPHP\Foundation\MappingSettingsClient;
+
+/**
+* Trait HasEthosMappingSettingModel
+*
+* Useful on models that have a related Ethos mapping setting model. The relation is connected via the `ethos_mapping_setting_id` attribute.
+*
+* @package MelonSmasher\EthosLaravel\Traits\Foundation
+* @license https://raw.githubusercontent.com/MelonSmasher/ethos-laravel/master/LICENSE MIT
+* @author Alex Markessinis
+*/
+trait HasEthosMappingSettingModel
+{
+    /**
+    * @return mixed
+    */
+    protected function getArrayableAppends()
+    {
+        $this->appends = array_unique(array_merge($this->appends, ['ethosMappingSetting']));
+        return parent::getArrayableAppends();
+    }
 
     /**
-    * Trait HasEthosMappingSettingModel
+    * Ethos Model
     *
-    * Useful on models that have a related Ethos mapping setting model. The relation is connected via the `ethos_mapping_setting_id` attribute.
+    * The Ethos Model related by the `ethos_mapping_setting_id`.
     *
-    * @package MelonSmasher\EthosLaravel\Traits\Foundation
+    * @return object
+    * @throws \GuzzleHttp\Exception\GuzzleException
     */
-    trait HasEthosMappingSettingModel
+    public function ethosMappingSetting()
     {
+        if (!empty($this->ethos_mapping_setting_id)) {
+            $client = new MappingSettingsClient(getEthosSession());
+            $cacheTTL = config('trait_response_cache_time', 0);
+            $ethosId = $this->ethos_mapping_setting_id;
+            $cacheKey = 'ms.ethos-php.laravel.mapping-setting.' . $ethosId;
 
-      /**
-       * @return mixed
-       */
-      protected function getArrayableAppends()
-      {
-          $this->appends = array_unique(array_merge($this->appends, ['ethosMappingSetting']));
-          return parent::getArrayableAppends();
-      }
-
-      /**
-       * Ethos Model
-       *
-       * The Ethos Model related by the `ethos_mapping_setting_id`.
-       *
-       * @return object
-       * @throws \GuzzleHttp\Exception\GuzzleException
-       */
-      public function ethosMappingSetting()
-      {
-          if (!empty($this->ethos_mapping_setting_id)) {
-              $client = new MappingSettingsClient(getEthosSession());
-              $cacheTTL = config('trait_response_cache_time', 0);
-              $ethosId = $this->ethos_mapping_setting_id;
-              $cacheKey = 'ms.ethos-php.laravel.mapping-setting.' . $ethosId;
-
-              // If we are caching the result attempt to pull from the cache
-              // If its not in the cache store it for next time
-              // Expiry is controlled by $cacheTTL
-              if ($cacheTTL) {
-                  return (object)unserialize(
-                      Cache::remember($cacheKey, $cacheTTL, function () use ($client, $ethosId) {
-                          return serialize($client->readById($ethosId)->data());
-                      })
-                  );
-              } else {
-                  // If the cache $cacheTTL is 0 or false just pull the object
-                  return (object)$client->readById($this->ethos_mapping_setting_id)->data();
-              }
-          }
-
-          return (object)[];
-      }
-
+            // If we are caching the result attempt to pull from the cache
+            // If its not in the cache store it for next time
+            // Expiry is controlled by $cacheTTL
+            if ($cacheTTL) {
+                return (object)unserialize(
+                    Cache::remember($cacheKey, $cacheTTL, function () use ($client, $ethosId) {
+                        return serialize($client->readById($ethosId)->data());
+                    })
+                );
+            } else {
+                // If the cache $cacheTTL is 0 or false just pull the object
+                return (object)$client->readById($this->ethos_mapping_setting_id)->data();
+            }
+        }
+        return (object)[];
     }
+}

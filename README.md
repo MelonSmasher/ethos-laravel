@@ -184,7 +184,7 @@ class MyController extends Controller
     }
     
     /**
-    * Shows a user's ORM Account
+    * Shows a user's Ethos Person Model
     */
     public function showUserAccount($id) 
     {

@@ -13,7 +13,7 @@ use MelonSmasher\EthosPHP\ErpBackend;
  * The Ethos service provider.
  *
  * @package MelonSmasher\EthosLaravel
- * @license https://raw.githubusercontent.com/MelonSmasher/ethos-php/master/LICENSE MIT
+ * @license https://raw.githubusercontent.com/MelonSmasher/ethos-laravel/master/LICENSE MIT
  * @author Alex Markessinis
  */
 class EthosServiceProvider extends ServiceProvider

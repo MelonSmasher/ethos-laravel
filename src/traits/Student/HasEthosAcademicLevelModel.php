@@ -1,62 +1,61 @@
 <?php
 
 
-    namespace MelonSmasher\EthosPHP\Laravel\Traits\Student;
+namespace MelonSmasher\EthosPHP\Laravel\Traits\Student;
 
 
-    use MelonSmasher\EthosPHP\Student\AcademicLevelsClient;
+use MelonSmasher\EthosPHP\Student\AcademicLevelsClient;
+
+/**
+* Trait HasEthosAcademicLevelModel
+*
+* Useful on models that have a related Ethos academic level model. The relation is connected via the `ethos_academic_level_id` attribute.
+*
+* @package MelonSmasher\EthosLaravel\Traits\Student
+* @license https://raw.githubusercontent.com/MelonSmasher/ethos-laravel/master/LICENSE MIT
+* @author Alex Markessinis
+*/
+trait HasEthosAcademicLevelModel
+{
+    /**
+    * @return mixed
+    */
+    protected function getArrayableAppends()
+    {
+        $this->appends = array_unique(array_merge($this->appends, ['ethosAcademicLevel']));
+        return parent::getArrayableAppends();
+    }
 
     /**
-    * Trait HasEthosAcademicLevelModel
+    * Ethos Model
     *
-    * Useful on models that have a related Ethos academic level model. The relation is connected via the `ethos_academic_level_id` attribute.
+    * The Ethos Model related by the `ethos_academic_level_id`.
     *
-    * @package MelonSmasher\EthosLaravel\Traits\Student
+    * @return object
+    * @throws \GuzzleHttp\Exception\GuzzleException
     */
-    trait HasEthosAcademicLevelModel
+    public function ethosAcademicLevel()
     {
+        if (!empty($this->ethos_academic_level_id)) {
+            $client = new AcademicLevelsClient(getEthosSession());
+            $cacheTTL = config('trait_response_cache_time', 0);
+            $ethosId = $this->ethos_academic_level_id;
+            $cacheKey = 'ms.ethos-php.laravel.academic-level.' . $ethosId;
 
-      /**
-       * @return mixed
-       */
-      protected function getArrayableAppends()
-      {
-          $this->appends = array_unique(array_merge($this->appends, ['ethosAcademicLevel']));
-          return parent::getArrayableAppends();
-      }
-
-      /**
-       * Ethos Model
-       *
-       * The Ethos Model related by the `ethos_academic_level_id`.
-       *
-       * @return object
-       * @throws \GuzzleHttp\Exception\GuzzleException
-       */
-      public function ethosAcademicLevel()
-      {
-          if (!empty($this->ethos_academic_level_id)) {
-              $client = new AcademicLevelsClient(getEthosSession());
-              $cacheTTL = config('trait_response_cache_time', 0);
-              $ethosId = $this->ethos_academic_level_id;
-              $cacheKey = 'ms.ethos-php.laravel.academic-level.' . $ethosId;
-
-              // If we are caching the result attempt to pull from the cache
-              // If its not in the cache store it for next time
-              // Expiry is controlled by $cacheTTL
-              if ($cacheTTL) {
-                  return (object)unserialize(
-                      Cache::remember($cacheKey, $cacheTTL, function () use ($client, $ethosId) {
-                          return serialize($client->readById($ethosId)->data());
-                      })
-                  );
-              } else {
-                  // If the cache $cacheTTL is 0 or false just pull the object
-                  return (object)$client->readById($this->ethos_academic_level_id)->data();
-              }
-          }
-
-          return (object)[];
-      }
-
+            // If we are caching the result attempt to pull from the cache
+            // If its not in the cache store it for next time
+            // Expiry is controlled by $cacheTTL
+            if ($cacheTTL) {
+                return (object)unserialize(
+                    Cache::remember($cacheKey, $cacheTTL, function () use ($client, $ethosId) {
+                        return serialize($client->readById($ethosId)->data());
+                    })
+                );
+            } else {
+                // If the cache $cacheTTL is 0 or false just pull the object
+                return (object)$client->readById($this->ethos_academic_level_id)->data();
+            }
+        }
+        return (object)[];
     }
+}

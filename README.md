@@ -13,7 +13,7 @@ Ellucian Ethos client library with enhancements for Laravel.
 ## Installation
 
 ```bash
-composer require melonsmasher/ethos-php
+composer require melonsmasher/ethos-laravel
 ```
 
 ## API Docs

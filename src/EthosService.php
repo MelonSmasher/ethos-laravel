@@ -47,7 +47,8 @@ class EthosService
 
         $ethos = Cache::get('melonsmasher_ethos_session', null);
         if (empty($ethos)) {
-            $ethos = serialize(new Ethos($secret, $baseURL, $erpBackend));
+            $ethos = new Ethos($secret, $baseURL, $erpBackend);
+            $ethos = serialize($ethos);
             Cache::put('melonsmasher_ethos_session', 240, $ethos);
         }
         $this->ethos = unserialize($ethos);

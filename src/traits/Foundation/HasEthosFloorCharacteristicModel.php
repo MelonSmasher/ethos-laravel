@@ -50,7 +50,7 @@ trait HasEthosFloorCharacteristicModel
                 $model = Cache::get($cacheKey, null);
                 if (empty($model)) {
                     $model = serialize($client->readById($ethosId)->data());
-                    Cache::put($cacheKey, $cacheTTL, $model);
+                    Cache::put($cacheKey, $model, $cacheTTL);
                 }
                 return (object)unserialize($model);
             }

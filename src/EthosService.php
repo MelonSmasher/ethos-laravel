@@ -52,7 +52,7 @@ class EthosService
         // If we don't have a JWT create a new Ethos session and cache the JWT
         if (empty($ethosJWT)) {
             $ethos = new Ethos($secret, $baseURL, $erpBackend);
-            Cache::put('melonsmasher_ethos_session', 240, $ethos->getJWT());
+            Cache::put('melonsmasher_ethos_session', $ethos->getJWT(), 240);
         }
         // Set the Ethos session object
         $this->ethos = $ethos;

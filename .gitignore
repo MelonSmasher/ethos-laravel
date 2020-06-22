@@ -137,3 +137,8 @@ fabric.properties
 
 genTraits.py
 ethosClasses.json
+
+build/
+tools/
+composer
+.php_cs.cache

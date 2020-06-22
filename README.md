@@ -11,8 +11,16 @@ Ellucian Ethos client library, built upon [MelonSmasher/ethos-php](https://githu
 
 ## Installation
 
+Pull the library into your project:
+
 ```bash
 composer require melonsmasher/ethos-laravel
+```
+
+Publish `ethos.php` to the config directory:
+
+```bash
+php artisan vendor:publish --tag ethos
 ```
 
 ## API Docs

@@ -28,6 +28,18 @@ trait HasEthosGradeModeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosGradeModeAttribute() {
+        return $this->ethosGradeMode();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_grade_mode_id`.

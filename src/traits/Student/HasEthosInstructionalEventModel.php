@@ -28,6 +28,18 @@ trait HasEthosInstructionalEventModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosInstructionalEventAttribute() {
+        return $this->ethosInstructionalEvent();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_instructional_event_id`.

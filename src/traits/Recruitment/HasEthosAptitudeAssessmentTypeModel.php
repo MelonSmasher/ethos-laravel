@@ -28,6 +28,18 @@ trait HasEthosAptitudeAssessmentTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAptitudeAssessmentTypeAttribute() {
+        return $this->ethosAptitudeAssessmentType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_aptitude_assessment_type_id`.

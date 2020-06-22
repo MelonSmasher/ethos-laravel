@@ -28,6 +28,18 @@ trait HasEthosAdmissionDecisionTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAdmissionDecisionTypeAttribute() {
+        return $this->ethosAdmissionDecisionType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_admission_decision_type_id`.

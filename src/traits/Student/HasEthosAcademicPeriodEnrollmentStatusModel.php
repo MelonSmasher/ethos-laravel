@@ -28,6 +28,18 @@ trait HasEthosAcademicPeriodEnrollmentStatusModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAcademicPeriodEnrollmentStatusAttribute() {
+        return $this->ethosAcademicPeriodEnrollmentStatus();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_academic_period_enrollment_status_id`.

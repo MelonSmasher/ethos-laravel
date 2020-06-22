@@ -28,6 +28,18 @@ trait HasEthosCitizenshipStatusModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosCitizenshipStatusAttribute() {
+        return $this->ethosCitizenshipStatus();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_citizenship_status_id`.

@@ -28,6 +28,18 @@ trait HasEthosFinancialDocumentTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosFinancialDocumentTypeAttribute() {
+        return $this->ethosFinancialDocumentType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_financial_document_type_id`.

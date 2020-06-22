@@ -28,6 +28,18 @@ trait HasEthosCollectionConfigurationSettingsOptionModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosCollectionConfigurationSettingsOptionAttribute() {
+        return $this->ethosCollectionConfigurationSettingsOption();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_collection_configuration_settings_option_id`.

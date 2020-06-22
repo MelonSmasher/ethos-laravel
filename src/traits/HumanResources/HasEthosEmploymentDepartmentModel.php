@@ -28,6 +28,18 @@ trait HasEthosEmploymentDepartmentModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosEmploymentDepartmentAttribute() {
+        return $this->ethosEmploymentDepartment();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_employment_department_id`.

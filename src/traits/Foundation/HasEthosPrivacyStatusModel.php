@@ -28,6 +28,18 @@ trait HasEthosPrivacyStatusModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosPrivacyStatusAttribute() {
+        return $this->ethosPrivacyStatus();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_privacy_status_id`.

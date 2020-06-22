@@ -28,6 +28,18 @@ trait HasEthosFreeOnBoardTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosFreeOnBoardTypeAttribute() {
+        return $this->ethosFreeOnBoardType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_free_on_board_type_id`.

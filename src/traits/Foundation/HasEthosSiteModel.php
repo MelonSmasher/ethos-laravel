@@ -28,6 +28,18 @@ trait HasEthosSiteModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosSiteAttribute() {
+        return $this->ethosSite();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_site_id`.

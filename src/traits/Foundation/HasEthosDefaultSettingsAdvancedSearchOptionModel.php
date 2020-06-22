@@ -28,6 +28,18 @@ trait HasEthosDefaultSettingsAdvancedSearchOptionModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosDefaultSettingsAdvancedSearchOptionAttribute() {
+        return $this->ethosDefaultSettingsAdvancedSearchOption();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_default_settings_advanced_search_option_id`.

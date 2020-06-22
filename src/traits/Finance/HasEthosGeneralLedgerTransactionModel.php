@@ -28,6 +28,18 @@ trait HasEthosGeneralLedgerTransactionModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosGeneralLedgerTransactionAttribute() {
+        return $this->ethosGeneralLedgerTransaction();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_general_ledger_transaction_id`.

@@ -28,6 +28,18 @@ trait HasEthosFixedAssetCategoryModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosFixedAssetCategoryAttribute() {
+        return $this->ethosFixedAssetCategory();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_fixed_asset_category_id`.

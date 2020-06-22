@@ -28,6 +28,18 @@ trait HasEthosShippingMethodModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosShippingMethodAttribute() {
+        return $this->ethosShippingMethod();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_shipping_method_id`.

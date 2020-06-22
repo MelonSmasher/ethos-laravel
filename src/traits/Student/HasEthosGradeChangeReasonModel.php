@@ -28,6 +28,18 @@ trait HasEthosGradeChangeReasonModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosGradeChangeReasonAttribute() {
+        return $this->ethosGradeChangeReason();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_grade_change_reason_id`.

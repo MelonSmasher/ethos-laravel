@@ -28,6 +28,18 @@ trait HasEthosAdmissionApplicationWithdrawalReasonModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAdmissionApplicationWithdrawalReasonAttribute() {
+        return $this->ethosAdmissionApplicationWithdrawalReason();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_admission_application_withdrawal_reason_id`.

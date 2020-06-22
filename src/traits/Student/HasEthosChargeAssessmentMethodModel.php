@@ -28,6 +28,18 @@ trait HasEthosChargeAssessmentMethodModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosChargeAssessmentMethodAttribute() {
+        return $this->ethosChargeAssessmentMethod();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_charge_assessment_method_id`.

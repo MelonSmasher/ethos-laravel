@@ -28,6 +28,18 @@ trait HasEthosFloorCharacteristicModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosFloorCharacteristicAttribute() {
+        return $this->ethosFloorCharacteristic();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_floor_characteristic_id`.

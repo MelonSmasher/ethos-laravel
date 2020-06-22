@@ -28,6 +28,18 @@ trait HasEthosSectionRegistrationsGradeOptionModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosSectionRegistrationsGradeOptionAttribute() {
+        return $this->ethosSectionRegistrationsGradeOption();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_section_registrations_grade_option_id`.

@@ -28,6 +28,18 @@ trait HasEthosAccountingCodeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAccountingCodeAttribute() {
+        return $this->ethosAccountingCode();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_accounting_code_id`.

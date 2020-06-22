@@ -28,6 +28,18 @@ trait HasEthosAcademicDisciplineModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAcademicDisciplineAttribute() {
+        return $this->ethosAcademicDiscipline();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_academic_discipline_id`.

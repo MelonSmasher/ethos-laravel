@@ -28,6 +28,18 @@ trait HasEthosLeavePlanModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosLeavePlanAttribute() {
+        return $this->ethosLeavePlan();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_leave_plan_id`.

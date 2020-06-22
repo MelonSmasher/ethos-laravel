@@ -28,6 +28,18 @@ trait HasEthosDefaultSettingModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosDefaultSettingAttribute() {
+        return $this->ethosDefaultSetting();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_default_setting_id`.

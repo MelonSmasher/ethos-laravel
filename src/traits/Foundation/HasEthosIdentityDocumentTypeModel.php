@@ -28,6 +28,18 @@ trait HasEthosIdentityDocumentTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosIdentityDocumentTypeAttribute() {
+        return $this->ethosIdentityDocumentType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_identity_document_type_id`.

@@ -28,6 +28,18 @@ trait HasEthosLanguageModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosLanguageAttribute() {
+        return $this->ethosLanguage();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_language_id`.

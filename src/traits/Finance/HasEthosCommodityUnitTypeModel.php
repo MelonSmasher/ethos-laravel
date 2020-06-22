@@ -28,6 +28,18 @@ trait HasEthosCommodityUnitTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosCommodityUnitTypeAttribute() {
+        return $this->ethosCommodityUnitType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_commodity_unit_type_id`.

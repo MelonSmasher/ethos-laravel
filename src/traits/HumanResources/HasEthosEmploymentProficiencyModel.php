@@ -28,6 +28,18 @@ trait HasEthosEmploymentProficiencyModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosEmploymentProficiencyAttribute() {
+        return $this->ethosEmploymentProficiency();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_employment_proficiency_id`.

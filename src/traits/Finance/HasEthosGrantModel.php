@@ -28,6 +28,18 @@ trait HasEthosGrantModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosGrantAttribute() {
+        return $this->ethosGrant();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_grant_id`.

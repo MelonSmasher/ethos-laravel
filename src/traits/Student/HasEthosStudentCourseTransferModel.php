@@ -28,6 +28,18 @@ trait HasEthosStudentCourseTransferModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosStudentCourseTransferAttribute() {
+        return $this->ethosStudentCourseTransfer();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_student_course_transfer_id`.

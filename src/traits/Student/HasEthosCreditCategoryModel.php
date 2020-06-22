@@ -28,6 +28,18 @@ trait HasEthosCreditCategoryModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosCreditCategoryAttribute() {
+        return $this->ethosCreditCategory();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_credit_category_id`.

@@ -28,6 +28,18 @@ trait HasEthosEmploymentVocationModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosEmploymentVocationAttribute() {
+        return $this->ethosEmploymentVocation();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_employment_vocation_id`.

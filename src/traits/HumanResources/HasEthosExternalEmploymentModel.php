@@ -28,6 +28,18 @@ trait HasEthosExternalEmploymentModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosExternalEmploymentAttribute() {
+        return $this->ethosExternalEmployment();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_external_employment_id`.

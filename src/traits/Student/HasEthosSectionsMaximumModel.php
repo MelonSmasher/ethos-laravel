@@ -28,6 +28,18 @@ trait HasEthosSectionsMaximumModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosSectionsMaximumAttribute() {
+        return $this->ethosSectionsMaximum();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_sections_maximum_id`.

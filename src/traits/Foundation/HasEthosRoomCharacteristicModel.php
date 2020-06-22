@@ -28,6 +28,18 @@ trait HasEthosRoomCharacteristicModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosRoomCharacteristicAttribute() {
+        return $this->ethosRoomCharacteristic();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_room_characteristic_id`.

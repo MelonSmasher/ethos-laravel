@@ -28,6 +28,18 @@ trait HasEthosStudentGradePointAverageModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosStudentGradePointAverageAttribute() {
+        return $this->ethosStudentGradePointAverage();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_student_grade_point_average_id`.

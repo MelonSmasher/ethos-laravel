@@ -28,6 +28,18 @@ trait HasEthosVendorModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosVendorAttribute() {
+        return $this->ethosVendor();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_vendor_id`.

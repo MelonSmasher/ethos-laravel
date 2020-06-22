@@ -28,6 +28,18 @@ trait HasEthosBudgetPhaseLineItemModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosBudgetPhaseLineItemAttribute() {
+        return $this->ethosBudgetPhaseLineItem();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_budget_phase_line_item_id`.

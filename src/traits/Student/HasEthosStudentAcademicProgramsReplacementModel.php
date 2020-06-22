@@ -28,6 +28,18 @@ trait HasEthosStudentAcademicProgramsReplacementModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosStudentAcademicProgramsReplacementAttribute() {
+        return $this->ethosStudentAcademicProgramsReplacement();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_student_academic_programs_replacement_id`.

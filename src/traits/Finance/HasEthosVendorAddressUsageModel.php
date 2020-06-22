@@ -28,6 +28,18 @@ trait HasEthosVendorAddressUsageModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosVendorAddressUsageAttribute() {
+        return $this->ethosVendorAddressUsage();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_vendor_address_usage_id`.

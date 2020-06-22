@@ -28,6 +28,18 @@ trait HasEthosInstructionalMethodModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosInstructionalMethodAttribute() {
+        return $this->ethosInstructionalMethod();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_instructional_method_id`.

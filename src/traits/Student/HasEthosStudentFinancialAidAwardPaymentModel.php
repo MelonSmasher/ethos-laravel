@@ -28,6 +28,18 @@ trait HasEthosStudentFinancialAidAwardPaymentModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosStudentFinancialAidAwardPaymentAttribute() {
+        return $this->ethosStudentFinancialAidAwardPayment();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_student_financial_aid_award_payment_id`.

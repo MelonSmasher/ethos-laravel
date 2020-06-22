@@ -28,6 +28,18 @@ trait HasEthosRelationshipTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosRelationshipTypeAttribute() {
+        return $this->ethosRelationshipType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_relationship_type_id`.

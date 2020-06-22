@@ -28,6 +28,18 @@ trait HasEthosHousingRequestModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosHousingRequestAttribute() {
+        return $this->ethosHousingRequest();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_housing_request_id`.

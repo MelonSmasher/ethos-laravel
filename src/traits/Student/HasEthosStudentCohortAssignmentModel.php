@@ -28,6 +28,18 @@ trait HasEthosStudentCohortAssignmentModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosStudentCohortAssignmentAttribute() {
+        return $this->ethosStudentCohortAssignment();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_student_cohort_assignment_id`.

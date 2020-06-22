@@ -28,6 +28,18 @@ trait HasEthosPersonalRelationshipInitiationProcesModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosPersonalRelationshipInitiationProcesAttribute() {
+        return $this->ethosPersonalRelationshipInitiationProces();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_personal_relationship_initiation_proces_id`.

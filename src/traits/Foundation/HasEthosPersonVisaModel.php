@@ -28,6 +28,18 @@ trait HasEthosPersonVisaModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosPersonVisaAttribute() {
+        return $this->ethosPersonVisa();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_person_visa_id`.

@@ -28,6 +28,18 @@ trait HasEthosPositionClassificationModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosPositionClassificationAttribute() {
+        return $this->ethosPositionClassification();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_position_classification_id`.

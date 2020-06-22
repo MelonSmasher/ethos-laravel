@@ -28,6 +28,18 @@ trait HasEthosEducationalGoalModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosEducationalGoalAttribute() {
+        return $this->ethosEducationalGoal();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_educational_goal_id`.

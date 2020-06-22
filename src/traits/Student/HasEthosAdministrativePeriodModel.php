@@ -28,6 +28,18 @@ trait HasEthosAdministrativePeriodModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAdministrativePeriodAttribute() {
+        return $this->ethosAdministrativePeriod();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_administrative_period_id`.

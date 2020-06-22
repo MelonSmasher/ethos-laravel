@@ -28,6 +28,18 @@ trait HasEthosAlternativeCredentialTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAlternativeCredentialTypeAttribute() {
+        return $this->ethosAlternativeCredentialType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_alternative_credential_type_id`.

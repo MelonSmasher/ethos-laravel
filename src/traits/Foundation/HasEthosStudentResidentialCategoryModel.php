@@ -28,6 +28,18 @@ trait HasEthosStudentResidentialCategoryModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosStudentResidentialCategoryAttribute() {
+        return $this->ethosStudentResidentialCategory();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_student_residential_category_id`.

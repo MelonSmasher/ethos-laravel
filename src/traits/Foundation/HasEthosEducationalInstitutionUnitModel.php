@@ -28,6 +28,18 @@ trait HasEthosEducationalInstitutionUnitModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosEducationalInstitutionUnitAttribute() {
+        return $this->ethosEducationalInstitutionUnit();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_educational_institution_unit_id`.

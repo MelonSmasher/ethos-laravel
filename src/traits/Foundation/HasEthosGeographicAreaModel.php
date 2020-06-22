@@ -28,6 +28,18 @@ trait HasEthosGeographicAreaModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosGeographicAreaAttribute() {
+        return $this->ethosGeographicArea();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_geographic_area_id`.

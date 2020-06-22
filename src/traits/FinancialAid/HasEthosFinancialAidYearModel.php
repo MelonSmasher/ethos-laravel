@@ -28,6 +28,18 @@ trait HasEthosFinancialAidYearModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosFinancialAidYearAttribute() {
+        return $this->ethosFinancialAidYear();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_financial_aid_year_id`.

@@ -28,6 +28,18 @@ trait HasEthosCourseTitleTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosCourseTitleTypeAttribute() {
+        return $this->ethosCourseTitleType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_course_title_type_id`.

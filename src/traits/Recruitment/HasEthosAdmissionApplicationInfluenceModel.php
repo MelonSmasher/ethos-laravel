@@ -28,6 +28,18 @@ trait HasEthosAdmissionApplicationInfluenceModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAdmissionApplicationInfluenceAttribute() {
+        return $this->ethosAdmissionApplicationInfluence();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_admission_application_influence_id`.

@@ -28,6 +28,18 @@ trait HasEthosSectionDescriptionTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosSectionDescriptionTypeAttribute() {
+        return $this->ethosSectionDescriptionType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_section_description_type_id`.

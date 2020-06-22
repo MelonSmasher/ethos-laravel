@@ -28,6 +28,18 @@ trait HasEthosPersonAchievementModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosPersonAchievementAttribute() {
+        return $this->ethosPersonAchievement();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_person_achievement_id`.

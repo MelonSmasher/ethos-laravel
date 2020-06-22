@@ -28,6 +28,18 @@ trait HasEthosBlanketPurchaseOrderModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosBlanketPurchaseOrderAttribute() {
+        return $this->ethosBlanketPurchaseOrder();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_blanket_purchase_order_id`.

@@ -28,6 +28,18 @@ trait HasEthosRoomsMinimumModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosRoomsMinimumAttribute() {
+        return $this->ethosRoomsMinimum();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_rooms_minimum_id`.

@@ -28,6 +28,18 @@ trait HasEthosAdmissionResidencyTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAdmissionResidencyTypeAttribute() {
+        return $this->ethosAdmissionResidencyType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_admission_residency_type_id`.

@@ -28,6 +28,18 @@ trait HasEthosStudentRegistrationEligibilityModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosStudentRegistrationEligibilityAttribute() {
+        return $this->ethosStudentRegistrationEligibility();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_student_registration_eligibility_id`.

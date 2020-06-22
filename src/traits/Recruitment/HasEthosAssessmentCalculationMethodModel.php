@@ -28,6 +28,18 @@ trait HasEthosAssessmentCalculationMethodModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAssessmentCalculationMethodAttribute() {
+        return $this->ethosAssessmentCalculationMethod();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_assessment_calculation_method_id`.

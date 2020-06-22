@@ -28,6 +28,18 @@ trait HasEthosPersonalPronounModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosPersonalPronounAttribute() {
+        return $this->ethosPersonalPronoun();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_personal_pronoun_id`.

@@ -28,6 +28,18 @@ trait HasEthosAssessmentPercentileTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAssessmentPercentileTypeAttribute() {
+        return $this->ethosAssessmentPercentileType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_assessment_percentile_type_id`.

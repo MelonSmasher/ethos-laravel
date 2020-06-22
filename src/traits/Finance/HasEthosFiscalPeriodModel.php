@@ -28,6 +28,18 @@ trait HasEthosFiscalPeriodModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosFiscalPeriodAttribute() {
+        return $this->ethosFiscalPeriod();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_fiscal_period_id`.

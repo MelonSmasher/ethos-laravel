@@ -28,6 +28,18 @@ trait HasEthosAssessmentSpecialCircumstanceModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAssessmentSpecialCircumstanceAttribute() {
+        return $this->ethosAssessmentSpecialCircumstance();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_assessment_special_circumstance_id`.

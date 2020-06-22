@@ -28,6 +28,18 @@ trait HasEthosEarningTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosEarningTypeAttribute() {
+        return $this->ethosEarningType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_earning_type_id`.

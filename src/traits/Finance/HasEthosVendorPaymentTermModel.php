@@ -28,6 +28,18 @@ trait HasEthosVendorPaymentTermModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosVendorPaymentTermAttribute() {
+        return $this->ethosVendorPaymentTerm();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_vendor_payment_term_id`.

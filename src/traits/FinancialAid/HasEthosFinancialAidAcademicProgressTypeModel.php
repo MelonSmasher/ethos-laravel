@@ -28,6 +28,18 @@ trait HasEthosFinancialAidAcademicProgressTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosFinancialAidAcademicProgressTypeAttribute() {
+        return $this->ethosFinancialAidAcademicProgressType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_financial_aid_academic_progress_type_id`.

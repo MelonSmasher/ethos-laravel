@@ -28,6 +28,18 @@ trait HasEthosEmploymentLeaveOfAbsenceReasonModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosEmploymentLeaveOfAbsenceReasonAttribute() {
+        return $this->ethosEmploymentLeaveOfAbsenceReason();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_employment_leave_of_absence_reason_id`.

@@ -28,6 +28,18 @@ trait HasEthosMealPlanRequestModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosMealPlanRequestAttribute() {
+        return $this->ethosMealPlanRequest();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_meal_plan_request_id`.

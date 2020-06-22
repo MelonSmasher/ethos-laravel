@@ -28,6 +28,18 @@ trait HasEthosJobApplicationStatusModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosJobApplicationStatusAttribute() {
+        return $this->ethosJobApplicationStatus();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_job_application_status_id`.

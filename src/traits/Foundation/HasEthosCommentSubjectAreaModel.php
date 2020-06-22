@@ -28,6 +28,18 @@ trait HasEthosCommentSubjectAreaModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosCommentSubjectAreaAttribute() {
+        return $this->ethosCommentSubjectArea();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_comment_subject_area_id`.

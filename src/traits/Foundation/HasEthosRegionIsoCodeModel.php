@@ -28,6 +28,18 @@ trait HasEthosRegionIsoCodeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosRegionIsoCodeAttribute() {
+        return $this->ethosRegionIsoCode();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_region_iso_code_id`.

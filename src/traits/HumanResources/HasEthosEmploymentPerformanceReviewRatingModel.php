@@ -28,6 +28,18 @@ trait HasEthosEmploymentPerformanceReviewRatingModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosEmploymentPerformanceReviewRatingAttribute() {
+        return $this->ethosEmploymentPerformanceReviewRating();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_employment_performance_review_rating_id`.

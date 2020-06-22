@@ -28,6 +28,18 @@ trait HasEthosMealTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosMealTypeAttribute() {
+        return $this->ethosMealType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_meal_type_id`.

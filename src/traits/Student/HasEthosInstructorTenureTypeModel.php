@@ -28,6 +28,18 @@ trait HasEthosInstructorTenureTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosInstructorTenureTypeAttribute() {
+        return $this->ethosInstructorTenureType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_instructor_tenure_type_id`.

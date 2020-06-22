@@ -28,6 +28,18 @@ trait HasEthosPersonFilterModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosPersonFilterAttribute() {
+        return $this->ethosPersonFilter();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_person_filter_id`.

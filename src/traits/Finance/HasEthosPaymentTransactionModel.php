@@ -28,6 +28,18 @@ trait HasEthosPaymentTransactionModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosPaymentTransactionAttribute() {
+        return $this->ethosPaymentTransaction();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_payment_transaction_id`.

@@ -28,6 +28,18 @@ trait HasEthosJobChangeReasonModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosJobChangeReasonAttribute() {
+        return $this->ethosJobChangeReason();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_job_change_reason_id`.

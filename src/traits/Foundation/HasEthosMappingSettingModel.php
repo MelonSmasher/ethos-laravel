@@ -28,6 +28,18 @@ trait HasEthosMappingSettingModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosMappingSettingAttribute() {
+        return $this->ethosMappingSetting();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_mapping_setting_id`.

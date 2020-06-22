@@ -28,6 +28,18 @@ trait HasEthosInterestModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosInterestAttribute() {
+        return $this->ethosInterest();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_interest_id`.

@@ -28,6 +28,18 @@ trait HasEthosPersonMatchingRequestModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosPersonMatchingRequestAttribute() {
+        return $this->ethosPersonMatchingRequest();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_person_matching_request_id`.

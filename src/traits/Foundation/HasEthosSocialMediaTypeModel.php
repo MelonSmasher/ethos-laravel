@@ -28,6 +28,18 @@ trait HasEthosSocialMediaTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosSocialMediaTypeAttribute() {
+        return $this->ethosSocialMediaType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_social_media_type_id`.

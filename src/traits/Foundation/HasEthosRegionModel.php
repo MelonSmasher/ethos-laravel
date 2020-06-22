@@ -28,6 +28,18 @@ trait HasEthosRegionModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosRegionAttribute() {
+        return $this->ethosRegion();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_region_id`.

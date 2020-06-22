@@ -28,6 +28,18 @@ trait HasEthosStudentTranscriptGradesOptionModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosStudentTranscriptGradesOptionAttribute() {
+        return $this->ethosStudentTranscriptGradesOption();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_student_transcript_grades_option_id`.

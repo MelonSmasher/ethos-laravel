@@ -28,6 +28,18 @@ trait HasEthosInstructorCategoryModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosInstructorCategoryAttribute() {
+        return $this->ethosInstructorCategory();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_instructor_category_id`.

@@ -28,6 +28,18 @@ trait HasEthosAccountReceivableTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAccountReceivableTypeAttribute() {
+        return $this->ethosAccountReceivableType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_account_receivable_type_id`.

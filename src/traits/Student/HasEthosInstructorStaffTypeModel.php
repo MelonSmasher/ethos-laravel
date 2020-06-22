@@ -28,6 +28,18 @@ trait HasEthosInstructorStaffTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosInstructorStaffTypeAttribute() {
+        return $this->ethosInstructorStaffType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_instructor_staff_type_id`.

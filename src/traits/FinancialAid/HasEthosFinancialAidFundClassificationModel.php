@@ -28,6 +28,18 @@ trait HasEthosFinancialAidFundClassificationModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosFinancialAidFundClassificationAttribute() {
+        return $this->ethosFinancialAidFundClassification();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_financial_aid_fund_classification_id`.

@@ -28,6 +28,18 @@ trait HasEthosAdmissionApplicationSupportingItemStatusModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAdmissionApplicationSupportingItemStatusAttribute() {
+        return $this->ethosAdmissionApplicationSupportingItemStatus();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_admission_application_supporting_item_status_id`.

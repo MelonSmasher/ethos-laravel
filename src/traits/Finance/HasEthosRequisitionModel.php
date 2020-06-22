@@ -28,6 +28,18 @@ trait HasEthosRequisitionModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosRequisitionAttribute() {
+        return $this->ethosRequisition();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_requisition_id`.

@@ -28,6 +28,18 @@ trait HasEthosAccountingStringFormatModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAccountingStringFormatAttribute() {
+        return $this->ethosAccountingStringFormat();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_accounting_string_format_id`.

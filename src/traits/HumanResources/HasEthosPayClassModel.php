@@ -28,6 +28,18 @@ trait HasEthosPayClassModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosPayClassAttribute() {
+        return $this->ethosPayClass();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_pay_class_id`.

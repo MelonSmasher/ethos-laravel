@@ -28,6 +28,18 @@ trait HasEthosSectionGradeTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosSectionGradeTypeAttribute() {
+        return $this->ethosSectionGradeType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_section_grade_type_id`.

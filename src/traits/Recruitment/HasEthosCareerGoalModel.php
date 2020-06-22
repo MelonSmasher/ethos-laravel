@@ -28,6 +28,18 @@ trait HasEthosCareerGoalModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosCareerGoalAttribute() {
+        return $this->ethosCareerGoal();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_career_goal_id`.

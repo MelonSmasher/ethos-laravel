@@ -28,6 +28,18 @@ trait HasEthosBargainingUnitModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosBargainingUnitAttribute() {
+        return $this->ethosBargainingUnit();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_bargaining_unit_id`.

@@ -28,6 +28,18 @@ trait HasEthosVendorHoldReasonModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosVendorHoldReasonAttribute() {
+        return $this->ethosVendorHoldReason();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_vendor_hold_reason_id`.

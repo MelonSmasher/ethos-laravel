@@ -28,6 +28,18 @@ trait HasEthosAcademicLevelModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAcademicLevelAttribute() {
+        return $this->ethosAcademicLevel();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_academic_level_id`.

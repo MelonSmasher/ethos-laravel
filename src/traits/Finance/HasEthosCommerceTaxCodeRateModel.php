@@ -28,6 +28,18 @@ trait HasEthosCommerceTaxCodeRateModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosCommerceTaxCodeRateAttribute() {
+        return $this->ethosCommerceTaxCodeRate();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_commerce_tax_code_rate_id`.

@@ -28,6 +28,18 @@ trait HasEthosPersonExternalEducationModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosPersonExternalEducationAttribute() {
+        return $this->ethosPersonExternalEducation();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_person_external_education_id`.

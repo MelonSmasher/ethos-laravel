@@ -28,6 +28,18 @@ trait HasEthosRoomRateModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosRoomRateAttribute() {
+        return $this->ethosRoomRate();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_room_rate_id`.

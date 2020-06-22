@@ -28,6 +28,18 @@ trait HasEthosStudentAcademicProgramModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosStudentAcademicProgramAttribute() {
+        return $this->ethosStudentAcademicProgram();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_student_academic_program_id`.

@@ -28,6 +28,18 @@ trait HasEthosCountryIsoCodeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosCountryIsoCodeAttribute() {
+        return $this->ethosCountryIsoCode();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_country_iso_code_id`.

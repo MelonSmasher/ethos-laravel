@@ -28,6 +28,18 @@ trait HasEthosEmployeeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosEmployeeAttribute() {
+        return $this->ethosEmployee();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_employee_id`.

@@ -28,6 +28,18 @@ trait HasEthosAddressTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAddressTypeAttribute() {
+        return $this->ethosAddressType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_address_type_id`.

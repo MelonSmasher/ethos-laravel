@@ -28,6 +28,18 @@ trait HasEthosRaceModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosRaceAttribute() {
+        return $this->ethosRace();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_race_id`.

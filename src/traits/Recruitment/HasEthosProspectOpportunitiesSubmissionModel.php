@@ -28,6 +28,18 @@ trait HasEthosProspectOpportunitiesSubmissionModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosProspectOpportunitiesSubmissionAttribute() {
+        return $this->ethosProspectOpportunitiesSubmission();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_prospect_opportunities_submission_id`.

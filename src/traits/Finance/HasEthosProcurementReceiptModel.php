@@ -28,6 +28,18 @@ trait HasEthosProcurementReceiptModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosProcurementReceiptAttribute() {
+        return $this->ethosProcurementReceipt();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_procurement_receipt_id`.

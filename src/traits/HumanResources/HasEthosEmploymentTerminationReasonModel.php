@@ -28,6 +28,18 @@ trait HasEthosEmploymentTerminationReasonModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosEmploymentTerminationReasonAttribute() {
+        return $this->ethosEmploymentTerminationReason();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_employment_termination_reason_id`.

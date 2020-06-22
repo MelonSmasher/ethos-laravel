@@ -28,6 +28,18 @@ trait HasEthosStudentUnverifiedGradeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosStudentUnverifiedGradeAttribute() {
+        return $this->ethosStudentUnverifiedGrade();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_student_unverified_grade_id`.

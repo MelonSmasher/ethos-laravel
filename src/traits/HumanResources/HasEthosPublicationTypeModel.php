@@ -28,6 +28,18 @@ trait HasEthosPublicationTypeModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosPublicationTypeAttribute() {
+        return $this->ethosPublicationType();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_publication_type_id`.

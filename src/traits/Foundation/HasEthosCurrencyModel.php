@@ -28,6 +28,18 @@ trait HasEthosCurrencyModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosCurrencyAttribute() {
+        return $this->ethosCurrency();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_currency_id`.

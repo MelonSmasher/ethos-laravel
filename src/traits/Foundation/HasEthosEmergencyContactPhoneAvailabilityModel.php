@@ -28,6 +28,18 @@ trait HasEthosEmergencyContactPhoneAvailabilityModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosEmergencyContactPhoneAvailabilityAttribute() {
+        return $this->ethosEmergencyContactPhoneAvailability();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_emergency_contact_phone_availability_id`.

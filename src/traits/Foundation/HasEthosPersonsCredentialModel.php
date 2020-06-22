@@ -28,6 +28,18 @@ trait HasEthosPersonsCredentialModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosPersonsCredentialAttribute() {
+        return $this->ethosPersonsCredential();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_persons_credential_id`.

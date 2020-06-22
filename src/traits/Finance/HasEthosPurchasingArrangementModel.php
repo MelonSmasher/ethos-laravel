@@ -28,6 +28,18 @@ trait HasEthosPurchasingArrangementModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosPurchasingArrangementAttribute() {
+        return $this->ethosPurchasingArrangement();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_purchasing_arrangement_id`.

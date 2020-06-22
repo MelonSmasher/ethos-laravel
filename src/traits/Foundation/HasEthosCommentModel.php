@@ -28,6 +28,18 @@ trait HasEthosCommentModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosCommentAttribute() {
+        return $this->ethosComment();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_comment_id`.

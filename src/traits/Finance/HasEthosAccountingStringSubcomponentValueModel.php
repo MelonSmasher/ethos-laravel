@@ -28,6 +28,18 @@ trait HasEthosAccountingStringSubcomponentValueModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosAccountingStringSubcomponentValueAttribute() {
+        return $this->ethosAccountingStringSubcomponentValue();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_accounting_string_subcomponent_value_id`.

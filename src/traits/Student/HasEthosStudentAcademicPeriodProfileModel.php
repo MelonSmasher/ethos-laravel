@@ -28,6 +28,18 @@ trait HasEthosStudentAcademicPeriodProfileModel
     }
 
     /**
+     * Get Attribute
+     *
+     * Returns the attribute object.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getEthosStudentAcademicPeriodProfileAttribute() {
+        return $this->ethosStudentAcademicPeriodProfile();
+    }
+
+    /**
     * Ethos Model
     *
     * The Ethos Model related by the `ethos_student_academic_period_profile_id`.

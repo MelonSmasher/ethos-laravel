@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Foundation;
 
 
 use MelonSmasher\EthosPHP\Foundation\PrivacyStatusesClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosPrivacyStatusModel

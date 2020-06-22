@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\HumanResources;
 
 
 use MelonSmasher\EthosPHP\HumanResources\EmploymentPerformanceReviewRatingsClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosEmploymentPerformanceReviewRatingModel

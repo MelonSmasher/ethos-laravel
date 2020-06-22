@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Foundation;
 
 
 use MelonSmasher\EthosPHP\Foundation\InterestsClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosInterestModel

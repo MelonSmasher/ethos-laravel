@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Student;
 
 
 use MelonSmasher\EthosPHP\Student\GradeDefinitionsMaximumClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosGradeDefinitionsMaximumModel

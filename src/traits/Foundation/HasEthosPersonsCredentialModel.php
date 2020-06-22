@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Foundation;
 
 
 use MelonSmasher\EthosPHP\Foundation\PersonsCredentialsClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosPersonsCredentialModel

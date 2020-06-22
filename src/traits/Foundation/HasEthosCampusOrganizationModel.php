@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Foundation;
 
 
 use MelonSmasher\EthosPHP\Foundation\CampusOrganizationsClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosCampusOrganizationModel

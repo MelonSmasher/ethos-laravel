@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Foundation;
 
 
 use MelonSmasher\EthosPHP\Foundation\ProficiencyLicensingAuthoritiesClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosProficiencyLicensingAuthorityModel

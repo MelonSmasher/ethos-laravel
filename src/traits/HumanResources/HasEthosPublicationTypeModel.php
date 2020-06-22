@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\HumanResources;
 
 
 use MelonSmasher\EthosPHP\HumanResources\PublicationTypesClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosPublicationTypeModel

@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Foundation;
 
 
 use MelonSmasher\EthosPHP\Foundation\CompoundConfigurationSettingsOptionsClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosCompoundConfigurationSettingsOptionModel

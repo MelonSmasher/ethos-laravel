@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Foundation;
 
 
 use MelonSmasher\EthosPHP\Foundation\SourcesClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosSourceModel

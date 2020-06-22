@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\HumanResources;
 
 
 use MelonSmasher\EthosPHP\HumanResources\LeaveTypesClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosLeaveTypeModel

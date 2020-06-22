@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Student;
 
 
 use MelonSmasher\EthosPHP\Student\CourseCategoriesClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosCourseCategoryModel

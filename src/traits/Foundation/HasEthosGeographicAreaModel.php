@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Foundation;
 
 
 use MelonSmasher\EthosPHP\Foundation\GeographicAreasClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosGeographicAreaModel

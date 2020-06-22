@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Student;
 
 
 use MelonSmasher\EthosPHP\Student\InstructionalEventsClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosInstructionalEventModel

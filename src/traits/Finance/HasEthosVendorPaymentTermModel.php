@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Finance;
 
 
 use MelonSmasher\EthosPHP\Finance\VendorPaymentTermsClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosVendorPaymentTermModel

@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Foundation;
 
 
 use MelonSmasher\EthosPHP\Foundation\RegionsClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosRegionModel

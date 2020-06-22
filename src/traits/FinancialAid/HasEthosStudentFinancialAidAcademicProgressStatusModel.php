@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\FinancialAid;
 
 
 use MelonSmasher\EthosPHP\FinancialAid\StudentFinancialAidAcademicProgressStatusesClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosStudentFinancialAidAcademicProgressStatusModel

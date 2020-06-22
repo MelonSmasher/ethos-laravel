@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Recruitment;
 
 
 use MelonSmasher\EthosPHP\Recruitment\AdmissionApplicationSourcesClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosAdmissionApplicationSourceModel

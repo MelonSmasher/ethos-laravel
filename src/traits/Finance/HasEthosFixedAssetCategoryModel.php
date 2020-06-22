@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Finance;
 
 
 use MelonSmasher\EthosPHP\Finance\FixedAssetCategoriesClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosFixedAssetCategoryModel

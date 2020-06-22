@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Finance;
 
 
 use MelonSmasher\EthosPHP\Finance\VendorClassificationsClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosVendorClassificationModel

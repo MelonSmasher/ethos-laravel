@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Finance;
 
 
 use MelonSmasher\EthosPHP\Finance\CommerceTaxCodesClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosCommerceTaxCodeModel

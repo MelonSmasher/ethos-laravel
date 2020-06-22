@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Recruitment;
 
 
 use MelonSmasher\EthosPHP\Recruitment\AdmissionApplicationSupportingItemsClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosAdmissionApplicationSupportingItemModel

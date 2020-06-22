@@ -5,6 +5,7 @@ namespace MelonSmasher\EthosPHP\Laravel\Traits\Foundation;
 
 
 use MelonSmasher\EthosPHP\Foundation\RelationshipStatusesClient;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Trait HasEthosRelationshipStatusModel

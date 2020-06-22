@@ -50,10 +50,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "MelonSmasher\\EthosLaravel\\EthosServiceProvider"
+        "MelonSmasher\\EthosPHP\\Laravel\\EthosServiceProvider"
       ],
       "aliases": {
-        "Ethos": "MelonSmasher\\EthosLaravel\\Facade\\Ethos"
+        "Ethos": "MelonSmasher\\EthosPHP\\Laravel\\Facade\\Ethos"
       }
     }
   },

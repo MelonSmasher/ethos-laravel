@@ -1,6 +1,6 @@
 # ethos-laravel
 
-Ellucian Ethos client library with enhancements for Laravel.
+Ellucian Ethos client library, built upon [MelonSmasher/ethos-php](MelonSmasher/ethos-php), with enhancements for Laravel.
 
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://raw.githubusercontent.com/MelonSmasher/ethos-laravel/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/MelonSmasher/ethos-laravel)](https://github.com/MelonSmasher/ethos-laravel/issues)

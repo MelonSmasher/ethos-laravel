@@ -5,7 +5,6 @@ Ellucian Ethos client library with enhancements for Laravel.
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://raw.githubusercontent.com/MelonSmasher/ethos-laravel/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/MelonSmasher/ethos-laravel)](https://github.com/MelonSmasher/ethos-laravel/issues)
 ![GitHub top language](https://img.shields.io/github/languages/top/MelonSmasher/ethos-laravel)
-![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/MelonSmasher/ethos-laravel)
 ![Codacy grade](https://img.shields.io/codacy/grade/bf072523c9b44717aa77af8debb3b8cd)
 
 ---

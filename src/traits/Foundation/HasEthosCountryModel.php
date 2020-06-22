@@ -39,7 +39,7 @@ trait HasEthosCountryModel
     {
         if (!empty($this->ethos_country_id)) {
             $client = new CountriesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_country_id;
             $cacheKey = 'ms.ethos-php.laravel.country.' . $ethosId;
 

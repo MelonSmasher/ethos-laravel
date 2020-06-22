@@ -39,7 +39,7 @@ trait HasEthosSectionsMaximumModel
     {
         if (!empty($this->ethos_sections_maximum_id)) {
             $client = new SectionsMaximumClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_sections_maximum_id;
             $cacheKey = 'ms.ethos-php.laravel.sections-maximum.' . $ethosId;
 

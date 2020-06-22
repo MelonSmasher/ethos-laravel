@@ -39,7 +39,7 @@ trait HasEthosCommentSubjectAreaModel
     {
         if (!empty($this->ethos_comment_subject_area_id)) {
             $client = new CommentSubjectAreaClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_comment_subject_area_id;
             $cacheKey = 'ms.ethos-php.laravel.comment-subject-area.' . $ethosId;
 

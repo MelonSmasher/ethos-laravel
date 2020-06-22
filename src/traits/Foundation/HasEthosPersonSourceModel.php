@@ -39,7 +39,7 @@ trait HasEthosPersonSourceModel
     {
         if (!empty($this->ethos_person_source_id)) {
             $client = new PersonSourcesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_person_source_id;
             $cacheKey = 'ms.ethos-php.laravel.person-source.' . $ethosId;
 

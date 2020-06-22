@@ -39,7 +39,7 @@ trait HasEthosAccountsPayableInvoiceModel
     {
         if (!empty($this->ethos_accounts_payable_invoice_id)) {
             $client = new AccountsPayableInvoicesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_accounts_payable_invoice_id;
             $cacheKey = 'ms.ethos-php.laravel.accounts-payable-invoice.' . $ethosId;
 

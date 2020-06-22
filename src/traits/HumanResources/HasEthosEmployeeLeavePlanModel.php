@@ -39,7 +39,7 @@ trait HasEthosEmployeeLeavePlanModel
     {
         if (!empty($this->ethos_employee_leave_plan_id)) {
             $client = new EmployeeLeavePlansClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_employee_leave_plan_id;
             $cacheKey = 'ms.ethos-php.laravel.employee-leave-plan.' . $ethosId;
 

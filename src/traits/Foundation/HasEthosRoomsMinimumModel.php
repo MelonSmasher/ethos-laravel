@@ -39,7 +39,7 @@ trait HasEthosRoomsMinimumModel
     {
         if (!empty($this->ethos_rooms_minimum_id)) {
             $client = new RoomsMinimumClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_rooms_minimum_id;
             $cacheKey = 'ms.ethos-php.laravel.rooms-minimum.' . $ethosId;
 

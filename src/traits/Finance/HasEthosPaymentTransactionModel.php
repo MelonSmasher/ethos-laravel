@@ -39,7 +39,7 @@ trait HasEthosPaymentTransactionModel
     {
         if (!empty($this->ethos_payment_transaction_id)) {
             $client = new PaymentTransactionsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_payment_transaction_id;
             $cacheKey = 'ms.ethos-php.laravel.payment-transaction.' . $ethosId;
 

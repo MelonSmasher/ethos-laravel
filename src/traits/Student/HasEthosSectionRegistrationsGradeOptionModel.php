@@ -39,7 +39,7 @@ trait HasEthosSectionRegistrationsGradeOptionModel
     {
         if (!empty($this->ethos_section_registrations_grade_option_id)) {
             $client = new SectionRegistrationsGradeOptionsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_section_registrations_grade_option_id;
             $cacheKey = 'ms.ethos-php.laravel.section-registrations-grade-option.' . $ethosId;
 

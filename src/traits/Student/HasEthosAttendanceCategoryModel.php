@@ -39,7 +39,7 @@ trait HasEthosAttendanceCategoryModel
     {
         if (!empty($this->ethos_attendance_category_id)) {
             $client = new AttendanceCategoriesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_attendance_category_id;
             $cacheKey = 'ms.ethos-php.laravel.attendance-category.' . $ethosId;
 

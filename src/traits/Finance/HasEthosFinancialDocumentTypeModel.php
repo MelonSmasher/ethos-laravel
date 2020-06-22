@@ -39,7 +39,7 @@ trait HasEthosFinancialDocumentTypeModel
     {
         if (!empty($this->ethos_financial_document_type_id)) {
             $client = new FinancialDocumentTypesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_financial_document_type_id;
             $cacheKey = 'ms.ethos-php.laravel.financial-document-type.' . $ethosId;
 

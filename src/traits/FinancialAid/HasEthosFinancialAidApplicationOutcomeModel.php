@@ -39,7 +39,7 @@ trait HasEthosFinancialAidApplicationOutcomeModel
     {
         if (!empty($this->ethos_financial_aid_application_outcome_id)) {
             $client = new FinancialAidApplicationOutcomesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_financial_aid_application_outcome_id;
             $cacheKey = 'ms.ethos-php.laravel.financial-aid-application-outcome.' . $ethosId;
 

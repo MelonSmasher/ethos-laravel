@@ -39,7 +39,7 @@ trait HasEthosCompoundConfigurationSettingsOptionModel
     {
         if (!empty($this->ethos_compound_configuration_settings_option_id)) {
             $client = new CompoundConfigurationSettingsOptionsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_compound_configuration_settings_option_id;
             $cacheKey = 'ms.ethos-php.laravel.compound-configuration-settings-option.' . $ethosId;
 

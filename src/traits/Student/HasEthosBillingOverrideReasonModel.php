@@ -39,7 +39,7 @@ trait HasEthosBillingOverrideReasonModel
     {
         if (!empty($this->ethos_billing_override_reason_id)) {
             $client = new BillingOverrideReasonsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_billing_override_reason_id;
             $cacheKey = 'ms.ethos-php.laravel.billing-override-reason.' . $ethosId;
 

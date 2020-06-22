@@ -39,7 +39,7 @@ trait HasEthosAdmissionApplicationSupportingItemStatusModel
     {
         if (!empty($this->ethos_admission_application_supporting_item_status_id)) {
             $client = new AdmissionApplicationSupportingItemStatusesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_admission_application_supporting_item_status_id;
             $cacheKey = 'ms.ethos-php.laravel.admission-application-supporting-item-status.' . $ethosId;
 

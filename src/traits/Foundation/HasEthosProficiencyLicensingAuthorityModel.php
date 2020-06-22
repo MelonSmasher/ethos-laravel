@@ -39,7 +39,7 @@ trait HasEthosProficiencyLicensingAuthorityModel
     {
         if (!empty($this->ethos_proficiency_licensing_authority_id)) {
             $client = new ProficiencyLicensingAuthoritiesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_proficiency_licensing_authority_id;
             $cacheKey = 'ms.ethos-php.laravel.proficiency-licensing-authority.' . $ethosId;
 

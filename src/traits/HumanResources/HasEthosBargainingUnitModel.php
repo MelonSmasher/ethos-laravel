@@ -39,7 +39,7 @@ trait HasEthosBargainingUnitModel
     {
         if (!empty($this->ethos_bargaining_unit_id)) {
             $client = new BargainingUnitsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_bargaining_unit_id;
             $cacheKey = 'ms.ethos-php.laravel.bargaining-unit.' . $ethosId;
 

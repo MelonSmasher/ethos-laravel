@@ -39,7 +39,7 @@ trait HasEthosAlternativeCredentialTypeModel
     {
         if (!empty($this->ethos_alternative_credential_type_id)) {
             $client = new AlternativeCredentialTypesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_alternative_credential_type_id;
             $cacheKey = 'ms.ethos-php.laravel.alternative-credential-type.' . $ethosId;
 

@@ -39,7 +39,7 @@ trait HasEthosAssessmentSpecialCircumstanceModel
     {
         if (!empty($this->ethos_assessment_special_circumstance_id)) {
             $client = new AssessmentSpecialCircumstancesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_assessment_special_circumstance_id;
             $cacheKey = 'ms.ethos-php.laravel.assessment-special-circumstance.' . $ethosId;
 

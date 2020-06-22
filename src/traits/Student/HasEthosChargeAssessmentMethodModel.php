@@ -39,7 +39,7 @@ trait HasEthosChargeAssessmentMethodModel
     {
         if (!empty($this->ethos_charge_assessment_method_id)) {
             $client = new ChargeAssessmentMethodsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_charge_assessment_method_id;
             $cacheKey = 'ms.ethos-php.laravel.charge-assessment-method.' . $ethosId;
 

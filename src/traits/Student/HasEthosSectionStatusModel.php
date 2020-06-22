@@ -39,7 +39,7 @@ trait HasEthosSectionStatusModel
     {
         if (!empty($this->ethos_section_status_id)) {
             $client = new SectionStatusesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_section_status_id;
             $cacheKey = 'ms.ethos-php.laravel.section-status.' . $ethosId;
 

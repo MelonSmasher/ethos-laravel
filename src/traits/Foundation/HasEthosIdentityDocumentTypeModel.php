@@ -39,7 +39,7 @@ trait HasEthosIdentityDocumentTypeModel
     {
         if (!empty($this->ethos_identity_document_type_id)) {
             $client = new IdentityDocumentTypesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_identity_document_type_id;
             $cacheKey = 'ms.ethos-php.laravel.identity-document-type.' . $ethosId;
 

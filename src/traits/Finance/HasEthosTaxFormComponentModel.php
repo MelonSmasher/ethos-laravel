@@ -39,7 +39,7 @@ trait HasEthosTaxFormComponentModel
     {
         if (!empty($this->ethos_tax_form_component_id)) {
             $client = new TaxFormComponentsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_tax_form_component_id;
             $cacheKey = 'ms.ethos-php.laravel.tax-form-component.' . $ethosId;
 

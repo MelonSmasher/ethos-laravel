@@ -39,7 +39,7 @@ trait HasEthosBeneficiaryPreferenceTypeModel
     {
         if (!empty($this->ethos_beneficiary_preference_type_id)) {
             $client = new BeneficiaryPreferenceTypesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_beneficiary_preference_type_id;
             $cacheKey = 'ms.ethos-php.laravel.beneficiary-preference-type.' . $ethosId;
 

@@ -39,7 +39,7 @@ trait HasEthosStudentTranscriptGradesOptionModel
     {
         if (!empty($this->ethos_student_transcript_grades_option_id)) {
             $client = new StudentTranscriptGradesOptionsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_student_transcript_grades_option_id;
             $cacheKey = 'ms.ethos-php.laravel.student-transcript-grades-option.' . $ethosId;
 

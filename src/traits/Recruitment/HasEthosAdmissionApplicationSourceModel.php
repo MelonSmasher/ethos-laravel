@@ -39,7 +39,7 @@ trait HasEthosAdmissionApplicationSourceModel
     {
         if (!empty($this->ethos_admission_application_source_id)) {
             $client = new AdmissionApplicationSourcesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_admission_application_source_id;
             $cacheKey = 'ms.ethos-php.laravel.admission-application-source.' . $ethosId;
 

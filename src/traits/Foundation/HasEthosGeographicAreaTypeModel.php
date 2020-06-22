@@ -39,7 +39,7 @@ trait HasEthosGeographicAreaTypeModel
     {
         if (!empty($this->ethos_geographic_area_type_id)) {
             $client = new GeographicAreaTypesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_geographic_area_type_id;
             $cacheKey = 'ms.ethos-php.laravel.geographic-area-type.' . $ethosId;
 

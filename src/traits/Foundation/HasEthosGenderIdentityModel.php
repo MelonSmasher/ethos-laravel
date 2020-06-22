@@ -39,7 +39,7 @@ trait HasEthosGenderIdentityModel
     {
         if (!empty($this->ethos_gender_identity_id)) {
             $client = new GenderIdentitiesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_gender_identity_id;
             $cacheKey = 'ms.ethos-php.laravel.gender-identity.' . $ethosId;
 

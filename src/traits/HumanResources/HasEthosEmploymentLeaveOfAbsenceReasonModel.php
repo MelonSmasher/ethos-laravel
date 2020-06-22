@@ -39,7 +39,7 @@ trait HasEthosEmploymentLeaveOfAbsenceReasonModel
     {
         if (!empty($this->ethos_employment_leave_of_absence_reason_id)) {
             $client = new EmploymentLeaveOfAbsenceReasonsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_employment_leave_of_absence_reason_id;
             $cacheKey = 'ms.ethos-php.laravel.employment-leave-of-absence-reason.' . $ethosId;
 

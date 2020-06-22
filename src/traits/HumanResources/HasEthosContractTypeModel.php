@@ -39,7 +39,7 @@ trait HasEthosContractTypeModel
     {
         if (!empty($this->ethos_contract_type_id)) {
             $client = new ContractTypesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_contract_type_id;
             $cacheKey = 'ms.ethos-php.laravel.contract-type.' . $ethosId;
 

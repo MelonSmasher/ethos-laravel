@@ -39,7 +39,7 @@ trait HasEthosAccountingStringComponentValueModel
     {
         if (!empty($this->ethos_accounting_string_component_value_id)) {
             $client = new AccountingStringComponentValuesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_accounting_string_component_value_id;
             $cacheKey = 'ms.ethos-php.laravel.accounting-string-component-value.' . $ethosId;
 

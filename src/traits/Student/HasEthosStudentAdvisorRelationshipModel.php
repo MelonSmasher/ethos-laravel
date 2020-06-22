@@ -39,7 +39,7 @@ trait HasEthosStudentAdvisorRelationshipModel
     {
         if (!empty($this->ethos_student_advisor_relationship_id)) {
             $client = new StudentAdvisorRelationshipsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_student_advisor_relationship_id;
             $cacheKey = 'ms.ethos-php.laravel.student-advisor-relationship.' . $ethosId;
 

@@ -39,7 +39,7 @@ trait HasEthosPersonEmploymentProficiencyModel
     {
         if (!empty($this->ethos_person_employment_proficiency_id)) {
             $client = new PersonEmploymentProficienciesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_person_employment_proficiency_id;
             $cacheKey = 'ms.ethos-php.laravel.person-employment-proficiency.' . $ethosId;
 

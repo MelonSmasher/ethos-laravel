@@ -39,7 +39,7 @@ trait HasEthosResidencyTypeModel
     {
         if (!empty($this->ethos_residency_type_id)) {
             $client = new ResidencyTypesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_residency_type_id;
             $cacheKey = 'ms.ethos-php.laravel.residency-type.' . $ethosId;
 

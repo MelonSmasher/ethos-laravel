@@ -39,7 +39,7 @@ trait HasEthosStudentAptitudeAssessmentModel
     {
         if (!empty($this->ethos_student_aptitude_assessment_id)) {
             $client = new StudentAptitudeAssessmentsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_student_aptitude_assessment_id;
             $cacheKey = 'ms.ethos-php.laravel.student-aptitude-assessment.' . $ethosId;
 

@@ -39,7 +39,7 @@ trait HasEthosStudentAcademicProgramsSubmissionModel
     {
         if (!empty($this->ethos_student_academic_programs_submission_id)) {
             $client = new StudentAcademicProgramsSubmissionsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_student_academic_programs_submission_id;
             $cacheKey = 'ms.ethos-php.laravel.student-academic-programs-submission.' . $ethosId;
 

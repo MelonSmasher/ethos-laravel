@@ -39,7 +39,7 @@ trait HasEthosAdvisorTypeModel
     {
         if (!empty($this->ethos_advisor_type_id)) {
             $client = new AdvisorTypesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_advisor_type_id;
             $cacheKey = 'ms.ethos-php.laravel.advisor-type.' . $ethosId;
 

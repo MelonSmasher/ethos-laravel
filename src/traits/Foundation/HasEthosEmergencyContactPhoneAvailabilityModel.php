@@ -39,7 +39,7 @@ trait HasEthosEmergencyContactPhoneAvailabilityModel
     {
         if (!empty($this->ethos_emergency_contact_phone_availability_id)) {
             $client = new EmergencyContactPhoneAvailabilitiesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_emergency_contact_phone_availability_id;
             $cacheKey = 'ms.ethos-php.laravel.emergency-contact-phone-availability.' . $ethosId;
 

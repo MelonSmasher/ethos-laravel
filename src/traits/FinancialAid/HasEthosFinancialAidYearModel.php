@@ -39,7 +39,7 @@ trait HasEthosFinancialAidYearModel
     {
         if (!empty($this->ethos_financial_aid_year_id)) {
             $client = new FinancialAidYearsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_financial_aid_year_id;
             $cacheKey = 'ms.ethos-php.laravel.financial-aid-year.' . $ethosId;
 

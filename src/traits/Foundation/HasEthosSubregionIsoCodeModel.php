@@ -39,7 +39,7 @@ trait HasEthosSubregionIsoCodeModel
     {
         if (!empty($this->ethos_subregion_iso_code_id)) {
             $client = new SubregionIsoCodesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_subregion_iso_code_id;
             $cacheKey = 'ms.ethos-php.laravel.subregion-iso-code.' . $ethosId;
 

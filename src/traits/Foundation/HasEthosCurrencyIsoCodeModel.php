@@ -39,7 +39,7 @@ trait HasEthosCurrencyIsoCodeModel
     {
         if (!empty($this->ethos_currency_iso_code_id)) {
             $client = new CurrencyIsoCodesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_currency_iso_code_id;
             $cacheKey = 'ms.ethos-php.laravel.currency-iso-code.' . $ethosId;
 

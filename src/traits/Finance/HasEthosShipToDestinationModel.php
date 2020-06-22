@@ -39,7 +39,7 @@ trait HasEthosShipToDestinationModel
     {
         if (!empty($this->ethos_ship_to_destination_id)) {
             $client = new ShipToDestinationsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_ship_to_destination_id;
             $cacheKey = 'ms.ethos-php.laravel.ship-to-destination.' . $ethosId;
 

@@ -39,7 +39,7 @@ trait HasEthosInterestModel
     {
         if (!empty($this->ethos_interest_id)) {
             $client = new InterestsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_interest_id;
             $cacheKey = 'ms.ethos-php.laravel.interest.' . $ethosId;
 

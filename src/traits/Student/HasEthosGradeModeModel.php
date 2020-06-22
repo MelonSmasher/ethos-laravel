@@ -39,7 +39,7 @@ trait HasEthosGradeModeModel
     {
         if (!empty($this->ethos_grade_mode_id)) {
             $client = new GradeModesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_grade_mode_id;
             $cacheKey = 'ms.ethos-php.laravel.grade-mode.' . $ethosId;
 

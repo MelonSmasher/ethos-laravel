@@ -39,7 +39,7 @@ trait HasEthosBlanketPurchaseOrderModel
     {
         if (!empty($this->ethos_blanket_purchase_order_id)) {
             $client = new BlanketPurchaseOrdersClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_blanket_purchase_order_id;
             $cacheKey = 'ms.ethos-php.laravel.blanket-purchase-order.' . $ethosId;
 

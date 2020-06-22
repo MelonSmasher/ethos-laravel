@@ -39,7 +39,7 @@ trait HasEthosRoomRateModel
     {
         if (!empty($this->ethos_room_rate_id)) {
             $client = new RoomRatesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_room_rate_id;
             $cacheKey = 'ms.ethos-php.laravel.room-rate.' . $ethosId;
 

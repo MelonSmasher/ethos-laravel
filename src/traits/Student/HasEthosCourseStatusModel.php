@@ -39,7 +39,7 @@ trait HasEthosCourseStatusModel
     {
         if (!empty($this->ethos_course_status_id)) {
             $client = new CourseStatusesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_course_status_id;
             $cacheKey = 'ms.ethos-php.laravel.course-status.' . $ethosId;
 

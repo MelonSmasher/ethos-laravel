@@ -39,7 +39,7 @@ trait HasEthosLedgerActivityModel
     {
         if (!empty($this->ethos_ledger_activity_id)) {
             $client = new LedgerActivitiesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_ledger_activity_id;
             $cacheKey = 'ms.ethos-php.laravel.ledger-activity.' . $ethosId;
 

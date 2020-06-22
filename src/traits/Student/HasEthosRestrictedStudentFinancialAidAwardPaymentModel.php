@@ -39,7 +39,7 @@ trait HasEthosRestrictedStudentFinancialAidAwardPaymentModel
     {
         if (!empty($this->ethos_restricted_student_financial_aid_award_payment_id)) {
             $client = new RestrictedStudentFinancialAidAwardPaymentsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_restricted_student_financial_aid_award_payment_id;
             $cacheKey = 'ms.ethos-php.laravel.restricted-student-financial-aid-award-payment.' . $ethosId;
 

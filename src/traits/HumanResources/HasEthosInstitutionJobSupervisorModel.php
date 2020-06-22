@@ -39,7 +39,7 @@ trait HasEthosInstitutionJobSupervisorModel
     {
         if (!empty($this->ethos_institution_job_supervisor_id)) {
             $client = new InstitutionJobSupervisorsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_institution_job_supervisor_id;
             $cacheKey = 'ms.ethos-php.laravel.institution-job-supervisor.' . $ethosId;
 

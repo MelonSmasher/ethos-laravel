@@ -39,7 +39,7 @@ trait HasEthosVendorHoldReasonModel
     {
         if (!empty($this->ethos_vendor_hold_reason_id)) {
             $client = new VendorHoldReasonsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_vendor_hold_reason_id;
             $cacheKey = 'ms.ethos-php.laravel.vendor-hold-reason.' . $ethosId;
 

@@ -39,7 +39,7 @@ trait HasEthosPersonMatchingRequestsInitiationsProspectModel
     {
         if (!empty($this->ethos_person_matching_requests_initiations_prospect_id)) {
             $client = new PersonMatchingRequestsInitiationsProspectsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_person_matching_requests_initiations_prospect_id;
             $cacheKey = 'ms.ethos-php.laravel.person-matching-requests-initiations-prospect.' . $ethosId;
 

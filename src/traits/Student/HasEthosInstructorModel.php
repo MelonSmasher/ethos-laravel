@@ -39,7 +39,7 @@ trait HasEthosInstructorModel
     {
         if (!empty($this->ethos_instructor_id)) {
             $client = new InstructorsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_instructor_id;
             $cacheKey = 'ms.ethos-php.laravel.instructor.' . $ethosId;
 

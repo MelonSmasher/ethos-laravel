@@ -39,7 +39,7 @@ trait HasEthosStudentAcademicProgramsReplacementModel
     {
         if (!empty($this->ethos_student_academic_programs_replacement_id)) {
             $client = new StudentAcademicProgramsReplacementsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_student_academic_programs_replacement_id;
             $cacheKey = 'ms.ethos-php.laravel.student-academic-programs-replacement.' . $ethosId;
 

@@ -39,7 +39,7 @@ trait HasEthosGradeDefinitionsMaximumModel
     {
         if (!empty($this->ethos_grade_definitions_maximum_id)) {
             $client = new GradeDefinitionsMaximumClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_grade_definitions_maximum_id;
             $cacheKey = 'ms.ethos-php.laravel.grade-definitions-maximum.' . $ethosId;
 

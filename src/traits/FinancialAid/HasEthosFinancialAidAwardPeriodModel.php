@@ -39,7 +39,7 @@ trait HasEthosFinancialAidAwardPeriodModel
     {
         if (!empty($this->ethos_financial_aid_award_period_id)) {
             $client = new FinancialAidAwardPeriodsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_financial_aid_award_period_id;
             $cacheKey = 'ms.ethos-php.laravel.financial-aid-award-period.' . $ethosId;
 

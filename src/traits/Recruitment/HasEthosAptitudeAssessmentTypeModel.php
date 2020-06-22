@@ -39,7 +39,7 @@ trait HasEthosAptitudeAssessmentTypeModel
     {
         if (!empty($this->ethos_aptitude_assessment_type_id)) {
             $client = new AptitudeAssessmentTypesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_aptitude_assessment_type_id;
             $cacheKey = 'ms.ethos-php.laravel.aptitude-assessment-type.' . $ethosId;
 

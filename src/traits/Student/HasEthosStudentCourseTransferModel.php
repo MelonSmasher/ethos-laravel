@@ -39,7 +39,7 @@ trait HasEthosStudentCourseTransferModel
     {
         if (!empty($this->ethos_student_course_transfer_id)) {
             $client = new StudentCourseTransfersClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_student_course_transfer_id;
             $cacheKey = 'ms.ethos-php.laravel.student-course-transfer.' . $ethosId;
 

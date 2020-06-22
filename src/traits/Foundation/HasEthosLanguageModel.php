@@ -39,7 +39,7 @@ trait HasEthosLanguageModel
     {
         if (!empty($this->ethos_language_id)) {
             $client = new LanguagesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_language_id;
             $cacheKey = 'ms.ethos-php.laravel.language.' . $ethosId;
 

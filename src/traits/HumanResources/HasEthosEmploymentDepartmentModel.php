@@ -39,7 +39,7 @@ trait HasEthosEmploymentDepartmentModel
     {
         if (!empty($this->ethos_employment_department_id)) {
             $client = new EmploymentDepartmentsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_employment_department_id;
             $cacheKey = 'ms.ethos-php.laravel.employment-department.' . $ethosId;
 

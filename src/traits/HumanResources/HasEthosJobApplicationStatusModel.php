@@ -39,7 +39,7 @@ trait HasEthosJobApplicationStatusModel
     {
         if (!empty($this->ethos_job_application_status_id)) {
             $client = new JobApplicationStatusesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_job_application_status_id;
             $cacheKey = 'ms.ethos-php.laravel.job-application-status.' . $ethosId;
 

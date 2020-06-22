@@ -39,7 +39,7 @@ trait HasEthosStudentAcademicPeriodModel
     {
         if (!empty($this->ethos_student_academic_period_id)) {
             $client = new StudentAcademicPeriodsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_student_academic_period_id;
             $cacheKey = 'ms.ethos-php.laravel.student-academic-period.' . $ethosId;
 

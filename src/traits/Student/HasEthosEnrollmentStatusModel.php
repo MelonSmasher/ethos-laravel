@@ -39,7 +39,7 @@ trait HasEthosEnrollmentStatusModel
     {
         if (!empty($this->ethos_enrollment_status_id)) {
             $client = new EnrollmentStatusesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_enrollment_status_id;
             $cacheKey = 'ms.ethos-php.laravel.enrollment-status.' . $ethosId;
 

@@ -39,7 +39,7 @@ trait HasEthosEmploymentOrganizationModel
     {
         if (!empty($this->ethos_employment_organization_id)) {
             $client = new EmploymentOrganizationsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_employment_organization_id;
             $cacheKey = 'ms.ethos-php.laravel.employment-organization.' . $ethosId;
 

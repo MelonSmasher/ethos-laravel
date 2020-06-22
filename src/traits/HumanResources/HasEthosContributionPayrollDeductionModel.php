@@ -39,7 +39,7 @@ trait HasEthosContributionPayrollDeductionModel
     {
         if (!empty($this->ethos_contribution_payroll_deduction_id)) {
             $client = new ContributionPayrollDeductionsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_contribution_payroll_deduction_id;
             $cacheKey = 'ms.ethos-php.laravel.contribution-payroll-deduction.' . $ethosId;
 

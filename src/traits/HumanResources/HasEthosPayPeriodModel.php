@@ -39,7 +39,7 @@ trait HasEthosPayPeriodModel
     {
         if (!empty($this->ethos_pay_period_id)) {
             $client = new PayPeriodsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_pay_period_id;
             $cacheKey = 'ms.ethos-php.laravel.pay-period.' . $ethosId;
 

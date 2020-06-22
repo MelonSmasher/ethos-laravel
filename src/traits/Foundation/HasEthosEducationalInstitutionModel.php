@@ -39,7 +39,7 @@ trait HasEthosEducationalInstitutionModel
     {
         if (!empty($this->ethos_educational_institution_id)) {
             $client = new EducationalInstitutionsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_educational_institution_id;
             $cacheKey = 'ms.ethos-php.laravel.educational-institution.' . $ethosId;
 

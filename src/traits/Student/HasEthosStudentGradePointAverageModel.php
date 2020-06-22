@@ -39,7 +39,7 @@ trait HasEthosStudentGradePointAverageModel
     {
         if (!empty($this->ethos_student_grade_point_average_id)) {
             $client = new StudentGradePointAveragesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_student_grade_point_average_id;
             $cacheKey = 'ms.ethos-php.laravel.student-grade-point-average.' . $ethosId;
 

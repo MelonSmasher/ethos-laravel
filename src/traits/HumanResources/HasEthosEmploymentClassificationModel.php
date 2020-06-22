@@ -39,7 +39,7 @@ trait HasEthosEmploymentClassificationModel
     {
         if (!empty($this->ethos_employment_classification_id)) {
             $client = new EmploymentClassificationsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_employment_classification_id;
             $cacheKey = 'ms.ethos-php.laravel.employment-classification.' . $ethosId;
 

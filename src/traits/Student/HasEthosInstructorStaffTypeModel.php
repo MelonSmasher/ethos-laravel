@@ -39,7 +39,7 @@ trait HasEthosInstructorStaffTypeModel
     {
         if (!empty($this->ethos_instructor_staff_type_id)) {
             $client = new InstructorStaffTypesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_instructor_staff_type_id;
             $cacheKey = 'ms.ethos-php.laravel.instructor-staff-type.' . $ethosId;
 

@@ -39,7 +39,7 @@ trait HasEthosEmploymentPerformanceReviewModel
     {
         if (!empty($this->ethos_employment_performance_review_id)) {
             $client = new EmploymentPerformanceReviewsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_employment_performance_review_id;
             $cacheKey = 'ms.ethos-php.laravel.employment-performance-review.' . $ethosId;
 

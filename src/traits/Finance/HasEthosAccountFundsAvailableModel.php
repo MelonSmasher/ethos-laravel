@@ -39,7 +39,7 @@ trait HasEthosAccountFundsAvailableModel
     {
         if (!empty($this->ethos_account_funds_available_id)) {
             $client = new AccountFundsAvailableClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_account_funds_available_id;
             $cacheKey = 'ms.ethos-php.laravel.account-funds-available.' . $ethosId;
 

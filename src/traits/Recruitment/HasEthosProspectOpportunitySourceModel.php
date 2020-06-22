@@ -39,7 +39,7 @@ trait HasEthosProspectOpportunitySourceModel
     {
         if (!empty($this->ethos_prospect_opportunity_source_id)) {
             $client = new ProspectOpportunitySourcesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_prospect_opportunity_source_id;
             $cacheKey = 'ms.ethos-php.laravel.prospect-opportunity-source.' . $ethosId;
 

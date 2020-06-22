@@ -39,7 +39,7 @@ trait HasEthosFinancialAidFundClassificationModel
     {
         if (!empty($this->ethos_financial_aid_fund_classification_id)) {
             $client = new FinancialAidFundClassificationsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_financial_aid_fund_classification_id;
             $cacheKey = 'ms.ethos-php.laravel.financial-aid-fund-classification.' . $ethosId;
 

@@ -39,7 +39,7 @@ trait HasEthosPersonEmploymentReferenceModel
     {
         if (!empty($this->ethos_person_employment_reference_id)) {
             $client = new PersonEmploymentReferencesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_person_employment_reference_id;
             $cacheKey = 'ms.ethos-php.laravel.person-employment-reference.' . $ethosId;
 

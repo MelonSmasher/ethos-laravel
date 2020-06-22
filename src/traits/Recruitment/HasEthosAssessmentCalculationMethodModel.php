@@ -39,7 +39,7 @@ trait HasEthosAssessmentCalculationMethodModel
     {
         if (!empty($this->ethos_assessment_calculation_method_id)) {
             $client = new AssessmentCalculationMethodsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_assessment_calculation_method_id;
             $cacheKey = 'ms.ethos-php.laravel.assessment-calculation-method.' . $ethosId;
 

@@ -39,7 +39,7 @@ trait HasEthosAssessmentPercentileTypeModel
     {
         if (!empty($this->ethos_assessment_percentile_type_id)) {
             $client = new AssessmentPercentileTypesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_assessment_percentile_type_id;
             $cacheKey = 'ms.ethos-php.laravel.assessment-percentile-type.' . $ethosId;
 

@@ -39,7 +39,7 @@ trait HasEthosAcademicPeriodEnrollmentStatusModel
     {
         if (!empty($this->ethos_academic_period_enrollment_status_id)) {
             $client = new AcademicPeriodEnrollmentStatusesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_academic_period_enrollment_status_id;
             $cacheKey = 'ms.ethos-php.laravel.academic-period-enrollment-status.' . $ethosId;
 

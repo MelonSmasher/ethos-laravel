@@ -39,7 +39,7 @@ trait HasEthosStudentUnverifiedGradeModel
     {
         if (!empty($this->ethos_student_unverified_grade_id)) {
             $client = new StudentUnverifiedGradesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_student_unverified_grade_id;
             $cacheKey = 'ms.ethos-php.laravel.student-unverified-grade.' . $ethosId;
 

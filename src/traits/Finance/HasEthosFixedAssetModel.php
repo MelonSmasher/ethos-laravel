@@ -39,7 +39,7 @@ trait HasEthosFixedAssetModel
     {
         if (!empty($this->ethos_fixed_asset_id)) {
             $client = new FixedAssetsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_fixed_asset_id;
             $cacheKey = 'ms.ethos-php.laravel.fixed-asset.' . $ethosId;
 

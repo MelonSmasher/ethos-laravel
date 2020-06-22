@@ -39,7 +39,7 @@ trait HasEthosRoomCharacteristicModel
     {
         if (!empty($this->ethos_room_characteristic_id)) {
             $client = new RoomCharacteristicsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_room_characteristic_id;
             $cacheKey = 'ms.ethos-php.laravel.room-characteristic.' . $ethosId;
 

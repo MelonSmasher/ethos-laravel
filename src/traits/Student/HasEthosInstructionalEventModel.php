@@ -39,7 +39,7 @@ trait HasEthosInstructionalEventModel
     {
         if (!empty($this->ethos_instructional_event_id)) {
             $client = new InstructionalEventsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_instructional_event_id;
             $cacheKey = 'ms.ethos-php.laravel.instructional-event.' . $ethosId;
 

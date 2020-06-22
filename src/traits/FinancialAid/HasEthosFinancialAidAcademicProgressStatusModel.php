@@ -39,7 +39,7 @@ trait HasEthosFinancialAidAcademicProgressStatusModel
     {
         if (!empty($this->ethos_financial_aid_academic_progress_status_id)) {
             $client = new FinancialAidAcademicProgressStatusesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_financial_aid_academic_progress_status_id;
             $cacheKey = 'ms.ethos-php.laravel.financial-aid-academic-progress-status.' . $ethosId;
 

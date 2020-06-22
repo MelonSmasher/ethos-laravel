@@ -39,7 +39,7 @@ trait HasEthosAcademicProgramModel
     {
         if (!empty($this->ethos_academic_program_id)) {
             $client = new AcademicProgramsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_academic_program_id;
             $cacheKey = 'ms.ethos-php.laravel.academic-program.' . $ethosId;
 

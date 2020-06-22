@@ -39,7 +39,7 @@ trait HasEthosAcademicDisciplineModel
     {
         if (!empty($this->ethos_academic_discipline_id)) {
             $client = new AcademicDisciplinesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_academic_discipline_id;
             $cacheKey = 'ms.ethos-php.laravel.academic-discipline.' . $ethosId;
 

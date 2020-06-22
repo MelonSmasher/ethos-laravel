@@ -39,7 +39,7 @@ trait HasEthosCommerceTaxCodeRateModel
     {
         if (!empty($this->ethos_commerce_tax_code_rate_id)) {
             $client = new CommerceTaxCodeRatesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_commerce_tax_code_rate_id;
             $cacheKey = 'ms.ethos-php.laravel.commerce-tax-code-rate.' . $ethosId;
 

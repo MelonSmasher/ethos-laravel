@@ -39,7 +39,7 @@ trait HasEthosExternalEmploymentStatusModel
     {
         if (!empty($this->ethos_external_employment_status_id)) {
             $client = new ExternalEmploymentStatusesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_external_employment_status_id;
             $cacheKey = 'ms.ethos-php.laravel.external-employment-status.' . $ethosId;
 

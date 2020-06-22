@@ -39,7 +39,7 @@ trait HasEthosRoommateCharacteristicModel
     {
         if (!empty($this->ethos_roommate_characteristic_id)) {
             $client = new RoommateCharacteristicsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_roommate_characteristic_id;
             $cacheKey = 'ms.ethos-php.laravel.roommate-characteristic.' . $ethosId;
 

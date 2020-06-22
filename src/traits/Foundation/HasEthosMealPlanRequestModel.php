@@ -39,7 +39,7 @@ trait HasEthosMealPlanRequestModel
     {
         if (!empty($this->ethos_meal_plan_request_id)) {
             $client = new MealPlanRequestsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_meal_plan_request_id;
             $cacheKey = 'ms.ethos-php.laravel.meal-plan-request.' . $ethosId;
 

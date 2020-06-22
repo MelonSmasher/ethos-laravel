@@ -39,7 +39,7 @@ trait HasEthosEducationalGoalModel
     {
         if (!empty($this->ethos_educational_goal_id)) {
             $client = new EducationalGoalsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_educational_goal_id;
             $cacheKey = 'ms.ethos-php.laravel.educational-goal.' . $ethosId;
 

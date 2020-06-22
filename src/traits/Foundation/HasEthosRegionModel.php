@@ -39,7 +39,7 @@ trait HasEthosRegionModel
     {
         if (!empty($this->ethos_region_id)) {
             $client = new RegionsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_region_id;
             $cacheKey = 'ms.ethos-php.laravel.region.' . $ethosId;
 

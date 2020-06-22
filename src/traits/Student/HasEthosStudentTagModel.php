@@ -39,7 +39,7 @@ trait HasEthosStudentTagModel
     {
         if (!empty($this->ethos_student_tag_id)) {
             $client = new StudentTagsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_student_tag_id;
             $cacheKey = 'ms.ethos-php.laravel.student-tag.' . $ethosId;
 

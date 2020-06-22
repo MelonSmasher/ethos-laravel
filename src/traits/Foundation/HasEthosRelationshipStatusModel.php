@@ -39,7 +39,7 @@ trait HasEthosRelationshipStatusModel
     {
         if (!empty($this->ethos_relationship_status_id)) {
             $client = new RelationshipStatusesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_relationship_status_id;
             $cacheKey = 'ms.ethos-php.laravel.relationship-status.' . $ethosId;
 

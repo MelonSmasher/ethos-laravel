@@ -39,7 +39,7 @@ trait HasEthosEmergencyContactTypeModel
     {
         if (!empty($this->ethos_emergency_contact_type_id)) {
             $client = new EmergencyContactTypesClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_emergency_contact_type_id;
             $cacheKey = 'ms.ethos-php.laravel.emergency-contact-type.' . $ethosId;
 

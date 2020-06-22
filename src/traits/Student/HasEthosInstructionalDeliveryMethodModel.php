@@ -39,7 +39,7 @@ trait HasEthosInstructionalDeliveryMethodModel
     {
         if (!empty($this->ethos_instructional_delivery_method_id)) {
             $client = new InstructionalDeliveryMethodsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_instructional_delivery_method_id;
             $cacheKey = 'ms.ethos-php.laravel.instructional-delivery-method.' . $ethosId;
 

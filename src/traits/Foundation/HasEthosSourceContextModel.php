@@ -39,7 +39,7 @@ trait HasEthosSourceContextModel
     {
         if (!empty($this->ethos_source_context_id)) {
             $client = new SourceContextsClient(getEthosSession());
-            $cacheTTL = config('trait_response_cache_time', 0);
+            $cacheTTL = config('ethos.trait_response_cache_time', 0);
             $ethosId = $this->ethos_source_context_id;
             $cacheKey = 'ms.ethos-php.laravel.source-context.' . $ethosId;
 

@@ -45,12 +45,12 @@ class EthosService
         $baseURL = $this->validate($baseURL, 'https://integrate.elluciancloud.com');
         $erpBackend = $this->validate($erpBackend, ErpBackend::COLLEAGUE);
 
-        $this->ethos = unserialize(
-            Cache::remember('melonsmasher_ethos_session', 240, function () use ($secret, $baseURL, $erpBackend) {
-                $mEthos = new Ethos($secret, $baseURL, $erpBackend);
-                return serialize($mEthos);
-            })
-        );
+        $ethos = Cache::get('melonsmasher_ethos_session', null);
+        if (empty($ethos)) {
+            $ethos = serialize(new Ethos($secret, $baseURL, $erpBackend));
+            Cache::put('melonsmasher_ethos_session', 240, $ethos);
+        }
+        $this->ethos = unserialize($ethos);
     }
 
     /**

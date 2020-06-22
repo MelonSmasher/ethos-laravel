@@ -46,11 +46,12 @@ trait HasEthosLeaveTypeModel
             // If its not in the cache store it for next time
             // Expiry is controlled by $cacheTTL
             if ($cacheTTL) {
-                return (object)unserialize(
-                    Cache::remember($cacheKey, $cacheTTL, function () use ($client, $ethosId) {
-                        return serialize($client->readById($ethosId)->data());
-                    })
-                );
+                $model = Cache::get($cacheKey, null);
+                if (empty($model)) {
+                    $model = serialize($client->readById($ethosId)->data());
+                    Cache::put($cacheKey, $cacheTTL, $model);
+                }
+                return (object)unserialize($model);
             }
             // If the cache $cacheTTL is 0 or false just pull the object
             return (object)$client->readById($this->ethos_leave_type_id)->data();

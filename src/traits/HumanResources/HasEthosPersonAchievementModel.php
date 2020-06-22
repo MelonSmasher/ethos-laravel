@@ -51,10 +51,9 @@ trait HasEthosPersonAchievementModel
                         return serialize($client->readById($ethosId)->data());
                     })
                 );
-            } else {
-                // If the cache $cacheTTL is 0 or false just pull the object
-                return (object)$client->readById($this->ethos_person_achievement_id)->data();
             }
+            // If the cache $cacheTTL is 0 or false just pull the object
+            return (object)$client->readById($this->ethos_person_achievement_id)->data();
         }
         return (object)[];
     }

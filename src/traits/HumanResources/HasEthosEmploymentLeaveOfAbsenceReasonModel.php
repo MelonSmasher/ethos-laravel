@@ -51,10 +51,9 @@ trait HasEthosEmploymentLeaveOfAbsenceReasonModel
                         return serialize($client->readById($ethosId)->data());
                     })
                 );
-            } else {
-                // If the cache $cacheTTL is 0 or false just pull the object
-                return (object)$client->readById($this->ethos_employment_leave_of_absence_reason_id)->data();
             }
+            // If the cache $cacheTTL is 0 or false just pull the object
+            return (object)$client->readById($this->ethos_employment_leave_of_absence_reason_id)->data();
         }
         return (object)[];
     }

@@ -51,10 +51,9 @@ trait HasEthosStudentFinancialAidAcademicProgressStatusModel
                         return serialize($client->readById($ethosId)->data());
                     })
                 );
-            } else {
-                // If the cache $cacheTTL is 0 or false just pull the object
-                return (object)$client->readById($this->ethos_student_financial_aid_academic_progress_status_id)->data();
             }
+            // If the cache $cacheTTL is 0 or false just pull the object
+            return (object)$client->readById($this->ethos_student_financial_aid_academic_progress_status_id)->data();
         }
         return (object)[];
     }

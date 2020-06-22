@@ -51,10 +51,9 @@ trait HasEthosAccountsPayableInvoiceModel
                         return serialize($client->readById($ethosId)->data());
                     })
                 );
-            } else {
-                // If the cache $cacheTTL is 0 or false just pull the object
-                return (object)$client->readById($this->ethos_accounts_payable_invoice_id)->data();
             }
+            // If the cache $cacheTTL is 0 or false just pull the object
+            return (object)$client->readById($this->ethos_accounts_payable_invoice_id)->data();
         }
         return (object)[];
     }

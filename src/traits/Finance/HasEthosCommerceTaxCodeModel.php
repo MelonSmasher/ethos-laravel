@@ -51,10 +51,9 @@ trait HasEthosCommerceTaxCodeModel
                         return serialize($client->readById($ethosId)->data());
                     })
                 );
-            } else {
-                // If the cache $cacheTTL is 0 or false just pull the object
-                return (object)$client->readById($this->ethos_commerce_tax_code_id)->data();
             }
+            // If the cache $cacheTTL is 0 or false just pull the object
+            return (object)$client->readById($this->ethos_commerce_tax_code_id)->data();
         }
         return (object)[];
     }

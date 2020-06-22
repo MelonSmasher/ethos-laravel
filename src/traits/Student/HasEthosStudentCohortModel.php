@@ -51,10 +51,9 @@ trait HasEthosStudentCohortModel
                         return serialize($client->readById($ethosId)->data());
                     })
                 );
-            } else {
-                // If the cache $cacheTTL is 0 or false just pull the object
-                return (object)$client->readById($this->ethos_student_cohort_id)->data();
             }
+            // If the cache $cacheTTL is 0 or false just pull the object
+            return (object)$client->readById($this->ethos_student_cohort_id)->data();
         }
         return (object)[];
     }

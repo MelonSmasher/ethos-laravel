@@ -19,12 +19,12 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosAssessmentSpecialCircumstanceModel
 {
     /**
-    * @return mixed
-    */
-    protected function getArrayableAppends()
+     * HasEthosAccountFundsAvailableModel constructor.
+     */
+    public function __construct()
     {
         $this->appends = array_unique(array_merge($this->appends, ['ethosAssessmentSpecialCircumstance']));
-        return parent::getArrayableAppends();
+        return parent::__construct();
     }
 
     /**

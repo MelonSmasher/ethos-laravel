@@ -19,12 +19,12 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosHousingRequestModel
 {
     /**
-    * @return mixed
-    */
-    protected function getArrayableAppends()
+     * HasEthosAccountFundsAvailableModel constructor.
+     */
+    public function __construct()
     {
         $this->appends = array_unique(array_merge($this->appends, ['ethosHousingRequest']));
-        return parent::getArrayableAppends();
+        return parent::__construct();
     }
 
     /**

@@ -19,12 +19,12 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosFixedAssetTypeModel
 {
     /**
-    * @return mixed
-    */
-    protected function getArrayableAppends()
+     * HasEthosAccountFundsAvailableModel constructor.
+     */
+    public function __construct()
     {
         $this->appends = array_unique(array_merge($this->appends, ['ethosFixedAssetType']));
-        return parent::getArrayableAppends();
+        return parent::__construct();
     }
 
     /**

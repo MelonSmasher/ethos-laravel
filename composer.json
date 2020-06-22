@@ -1,0 +1,65 @@
+{
+  "name": "melonsmasher/ethos-laravel",
+  "description": "A Laravel package that utilizes ethos-php to interact with the Ellucian Ethos API.",
+  "keywords": [
+    "ellucian",
+    "ethos",
+    "banner",
+    "colleague",
+    "api",
+    "erp",
+    "college",
+    "higher-ed",
+    "laravel"
+  ],
+  "type": "library",
+  "homepage": "https://github.com/MelonSmasher/ethos-laravel",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alex Markessinis",
+      "email": "markea125@gmail.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/MelonSmasher/ethos-laravel/issues",
+    "source": "https://github.com/MelonSmasher/ethos-laravel"
+  },
+  "require": {
+    "ext-json": "*",
+    "melonsmasher/ethos-php": "^0.0.2"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "MelonSmasher\\EthosPHP\\Laravel\\": "src/",
+      "MelonSmasher\\EthosPHP\\Laravel\\Facade\\": "src/facade",
+      "MelonSmasher\\EthosPHP\\Laravel\\Traits\\": "src/traits",
+      "MelonSmasher\\EthosPHP\\Laravel\\Traits\\Finance\\": "src/traits/Finance",
+      "MelonSmasher\\EthosPHP\\Laravel\\Traits\\FinancialAid\\": "src/traits/FinancialAid",
+      "MelonSmasher\\EthosPHP\\Laravel\\Traits\\Foundation\\": "src/traits/Foundation",
+      "MelonSmasher\\EthosPHP\\Laravel\\Traits\\HumanResources\\": "src/traits/HumanResources",
+      "MelonSmasher\\EthosPHP\\Laravel\\Traits\\Recruitment\\": "src/traits/Recruitment",
+      "MelonSmasher\\EthosPHP\\Laravel\\Traits\\Student\\": "src/traits/Student"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MelonSmasher\\EthosLaravel\\EthosServiceProvider"
+      ],
+      "aliases": {
+        "Ethos": "MelonSmasher\\EthosLaravel\\Facade\\Ethos"
+      }
+    }
+  },
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}

@@ -27,7 +27,7 @@
   },
   "require": {
     "ext-json": "*",
-    "melonsmasher/ethos-php": "^0.0.4"
+    "melonsmasher/ethos-php": "^0.0.5"
   },
   "require-dev": {
   },

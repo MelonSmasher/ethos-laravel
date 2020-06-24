@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e1f954a4b0591bfda3fe796b033aeb49",
+    "content-hash": "5e47e396a11b0b5e6efb6beb962825e4",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -197,16 +197,16 @@
         },
         {
             "name": "melonsmasher/ethos-php",
-            "version": "v0.0.4",
+            "version": "v0.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MelonSmasher/ethos-php.git",
-                "reference": "5def92a0e76bb7deba41e5fad7cc9aa0652764b3"
+                "reference": "869fac1b761a3b77cc616eb36422b7145c470f50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MelonSmasher/ethos-php/zipball/5def92a0e76bb7deba41e5fad7cc9aa0652764b3",
-                "reference": "5def92a0e76bb7deba41e5fad7cc9aa0652764b3",
+                "url": "https://api.github.com/repos/MelonSmasher/ethos-php/zipball/869fac1b761a3b77cc616eb36422b7145c470f50",
+                "reference": "869fac1b761a3b77cc616eb36422b7145c470f50",
                 "shasum": ""
             },
             "require": {
@@ -219,12 +219,14 @@
             "autoload": {
                 "psr-4": {
                     "MelonSmasher\\EthosPHP\\": "src/",
+                    "MelonSmasher\\EthosPHP\\Admin\\": "src/Admin/",
                     "MelonSmasher\\EthosPHP\\Finance\\": "src/Finance/",
                     "MelonSmasher\\EthosPHP\\FinancialAid\\": "src/FinancialAid/",
                     "MelonSmasher\\EthosPHP\\Foundation\\": "src/Foundation/",
                     "MelonSmasher\\EthosPHP\\HumanResources\\": "src/HumanResources/",
                     "MelonSmasher\\EthosPHP\\Recruitment\\": "src/Recruitment/",
-                    "MelonSmasher\\EthosPHP\\Student\\": "src/Student/"
+                    "MelonSmasher\\EthosPHP\\Student\\": "src/Student/",
+                    "MelonSmasher\\EthosPHP\\Util\\": "src/Util/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -249,7 +251,7 @@
                 "ethos",
                 "higher-ed"
             ],
-            "time": "2020-06-22T19:56:40+00:00"
+            "time": "2020-06-23T19:40:29+00:00"
         },
         {
             "name": "myclabs/php-enum",

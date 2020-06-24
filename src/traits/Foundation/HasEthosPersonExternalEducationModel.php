@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosPersonExternalEducationModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosPersonExternalEducation']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosPersonExternalEducationModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosPersonExternalEducationAttribute() {
+    public function getEthosPersonExternalEducationAttribute()
+    {
         return $this->ethosPersonExternalEducation();
     }
 

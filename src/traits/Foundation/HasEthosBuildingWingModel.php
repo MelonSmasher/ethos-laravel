@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosBuildingWingModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosBuildingWing']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosBuildingWingModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosBuildingWingAttribute() {
+    public function getEthosBuildingWingAttribute()
+    {
         return $this->ethosBuildingWing();
     }
 

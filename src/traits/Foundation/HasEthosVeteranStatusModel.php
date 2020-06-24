@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosVeteranStatusModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosVeteranStatus']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosVeteranStatusModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosVeteranStatusAttribute() {
+    public function getEthosVeteranStatusAttribute()
+    {
         return $this->ethosVeteranStatus();
     }
 

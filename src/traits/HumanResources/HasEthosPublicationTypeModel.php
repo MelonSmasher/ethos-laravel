@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosPublicationTypeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosPublicationType']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosPublicationTypeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosPublicationTypeAttribute() {
+    public function getEthosPublicationTypeAttribute()
+    {
         return $this->ethosPublicationType();
     }
 

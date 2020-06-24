@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosAccountingStringComponentModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosAccountingStringComponent']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosAccountingStringComponentModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosAccountingStringComponentAttribute() {
+    public function getEthosAccountingStringComponentAttribute()
+    {
         return $this->ethosAccountingStringComponent();
     }
 

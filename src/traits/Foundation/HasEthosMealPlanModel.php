@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosMealPlanModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosMealPlan']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosMealPlanModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosMealPlanAttribute() {
+    public function getEthosMealPlanAttribute()
+    {
         return $this->ethosMealPlan();
     }
 

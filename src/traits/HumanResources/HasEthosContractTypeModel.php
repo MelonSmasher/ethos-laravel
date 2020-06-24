@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosContractTypeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosContractType']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosContractTypeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosContractTypeAttribute() {
+    public function getEthosContractTypeAttribute()
+    {
         return $this->ethosContractType();
     }
 

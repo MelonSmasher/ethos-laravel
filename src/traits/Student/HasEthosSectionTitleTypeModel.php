@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosSectionTitleTypeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosSectionTitleType']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosSectionTitleTypeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosSectionTitleTypeAttribute() {
+    public function getEthosSectionTitleTypeAttribute()
+    {
         return $this->ethosSectionTitleType();
     }
 

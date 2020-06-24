@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosJobApplicationSourceModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosJobApplicationSource']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosJobApplicationSourceModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosJobApplicationSourceAttribute() {
+    public function getEthosJobApplicationSourceAttribute()
+    {
         return $this->ethosJobApplicationSource();
     }
 

@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosCampusInvolvementModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosCampusInvolvement']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosCampusInvolvementModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosCampusInvolvementAttribute() {
+    public function getEthosCampusInvolvementAttribute()
+    {
         return $this->ethosCampusInvolvement();
     }
 

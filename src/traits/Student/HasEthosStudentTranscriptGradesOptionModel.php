@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosStudentTranscriptGradesOptionModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosStudentTranscriptGradesOption']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosStudentTranscriptGradesOptionModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosStudentTranscriptGradesOptionAttribute() {
+    public function getEthosStudentTranscriptGradesOptionAttribute()
+    {
         return $this->ethosStudentTranscriptGradesOption();
     }
 

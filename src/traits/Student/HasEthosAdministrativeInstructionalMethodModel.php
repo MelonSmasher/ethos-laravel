@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosAdministrativeInstructionalMethodModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosAdministrativeInstructionalMethod']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosAdministrativeInstructionalMethodModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosAdministrativeInstructionalMethodAttribute() {
+    public function getEthosAdministrativeInstructionalMethodAttribute()
+    {
         return $this->ethosAdministrativeInstructionalMethod();
     }
 

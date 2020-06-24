@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosGradeModeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosGradeMode']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosGradeModeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosGradeModeAttribute() {
+    public function getEthosGradeModeAttribute()
+    {
         return $this->ethosGradeMode();
     }
 

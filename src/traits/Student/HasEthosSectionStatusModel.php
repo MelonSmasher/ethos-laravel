@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosSectionStatusModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosSectionStatus']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosSectionStatusModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosSectionStatusAttribute() {
+    public function getEthosSectionStatusAttribute()
+    {
         return $this->ethosSectionStatus();
     }
 

@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosStudentUnverifiedGradeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosStudentUnverifiedGrade']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosStudentUnverifiedGradeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosStudentUnverifiedGradeAttribute() {
+    public function getEthosStudentUnverifiedGradeAttribute()
+    {
         return $this->ethosStudentUnverifiedGrade();
     }
 

@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosFinancialAidApplicationOutcomeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosFinancialAidApplicationOutcome']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosFinancialAidApplicationOutcomeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosFinancialAidApplicationOutcomeAttribute() {
+    public function getEthosFinancialAidApplicationOutcomeAttribute()
+    {
         return $this->ethosFinancialAidApplicationOutcome();
     }
 

@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosBlanketPurchaseOrderModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosBlanketPurchaseOrder']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosBlanketPurchaseOrderModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosBlanketPurchaseOrderAttribute() {
+    public function getEthosBlanketPurchaseOrderAttribute()
+    {
         return $this->ethosBlanketPurchaseOrder();
     }
 

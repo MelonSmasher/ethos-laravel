@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosRoommateCharacteristicModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosRoommateCharacteristic']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosRoommateCharacteristicModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosRoommateCharacteristicAttribute() {
+    public function getEthosRoommateCharacteristicAttribute()
+    {
         return $this->ethosRoommateCharacteristic();
     }
 

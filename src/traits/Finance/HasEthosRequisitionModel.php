@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosRequisitionModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosRequisition']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosRequisitionModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosRequisitionAttribute() {
+    public function getEthosRequisitionAttribute()
+    {
         return $this->ethosRequisition();
     }
 

@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosAddressModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosAddress']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosAddressModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosAddressAttribute() {
+    public function getEthosAddressAttribute()
+    {
         return $this->ethosAddress();
     }
 

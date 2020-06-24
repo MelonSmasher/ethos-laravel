@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosPersonHoldModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosPersonHold']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosPersonHoldModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosPersonHoldAttribute() {
+    public function getEthosPersonHoldAttribute()
+    {
         return $this->ethosPersonHold();
     }
 

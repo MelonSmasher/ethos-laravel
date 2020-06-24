@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosDefaultSettingsAdvancedSearchOptionModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosDefaultSettingsAdvancedSearchOption']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosDefaultSettingsAdvancedSearchOptionModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosDefaultSettingsAdvancedSearchOptionAttribute() {
+    public function getEthosDefaultSettingsAdvancedSearchOptionAttribute()
+    {
         return $this->ethosDefaultSettingsAdvancedSearchOption();
     }
 

@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosStudentAdvisorRelationshipModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosStudentAdvisorRelationship']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosStudentAdvisorRelationshipModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosStudentAdvisorRelationshipAttribute() {
+    public function getEthosStudentAdvisorRelationshipAttribute()
+    {
         return $this->ethosStudentAdvisorRelationship();
     }
 

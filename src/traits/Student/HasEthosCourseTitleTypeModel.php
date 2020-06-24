@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosCourseTitleTypeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosCourseTitleType']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosCourseTitleTypeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosCourseTitleTypeAttribute() {
+    public function getEthosCourseTitleTypeAttribute()
+    {
         return $this->ethosCourseTitleType();
     }
 

@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosFinancialAidAcademicProgressTypeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosFinancialAidAcademicProgressType']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosFinancialAidAcademicProgressTypeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosFinancialAidAcademicProgressTypeAttribute() {
+    public function getEthosFinancialAidAcademicProgressTypeAttribute()
+    {
         return $this->ethosFinancialAidAcademicProgressType();
     }
 

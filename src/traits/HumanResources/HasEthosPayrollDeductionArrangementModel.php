@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosPayrollDeductionArrangementModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosPayrollDeductionArrangement']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosPayrollDeductionArrangementModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosPayrollDeductionArrangementAttribute() {
+    public function getEthosPayrollDeductionArrangementAttribute()
+    {
         return $this->ethosPayrollDeductionArrangement();
     }
 

@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosAdmissionApplicationStatusTypeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosAdmissionApplicationStatusType']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosAdmissionApplicationStatusTypeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosAdmissionApplicationStatusTypeAttribute() {
+    public function getEthosAdmissionApplicationStatusTypeAttribute()
+    {
         return $this->ethosAdmissionApplicationStatusType();
     }
 

@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosReligionModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosReligion']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosReligionModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosReligionAttribute() {
+    public function getEthosReligionAttribute()
+    {
         return $this->ethosReligion();
     }
 

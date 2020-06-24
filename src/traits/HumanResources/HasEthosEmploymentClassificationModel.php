@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosEmploymentClassificationModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosEmploymentClassification']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosEmploymentClassificationModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosEmploymentClassificationAttribute() {
+    public function getEthosEmploymentClassificationAttribute()
+    {
         return $this->ethosEmploymentClassification();
     }
 

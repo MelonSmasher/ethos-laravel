@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosStudentTagAssignmentModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosStudentTagAssignment']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosStudentTagAssignmentModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosStudentTagAssignmentAttribute() {
+    public function getEthosStudentTagAssignmentAttribute()
+    {
         return $this->ethosStudentTagAssignment();
     }
 

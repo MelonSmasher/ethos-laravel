@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosDeductionTypeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosDeductionType']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosDeductionTypeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosDeductionTypeAttribute() {
+    public function getEthosDeductionTypeAttribute()
+    {
         return $this->ethosDeductionType();
     }
 

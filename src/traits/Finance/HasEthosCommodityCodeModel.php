@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosCommodityCodeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosCommodityCode']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosCommodityCodeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosCommodityCodeAttribute() {
+    public function getEthosCommodityCodeAttribute()
+    {
         return $this->ethosCommodityCode();
     }
 

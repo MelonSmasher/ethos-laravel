@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosStudentAcademicProgramsSubmissionModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosStudentAcademicProgramsSubmission']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosStudentAcademicProgramsSubmissionModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosStudentAcademicProgramsSubmissionAttribute() {
+    public function getEthosStudentAcademicProgramsSubmissionAttribute()
+    {
         return $this->ethosStudentAcademicProgramsSubmission();
     }
 

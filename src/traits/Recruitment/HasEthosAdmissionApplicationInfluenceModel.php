@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosAdmissionApplicationInfluenceModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosAdmissionApplicationInfluence']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosAdmissionApplicationInfluenceModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosAdmissionApplicationInfluenceAttribute() {
+    public function getEthosAdmissionApplicationInfluenceAttribute()
+    {
         return $this->ethosAdmissionApplicationInfluence();
     }
 

@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosAdmissionApplicationSourceModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosAdmissionApplicationSource']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosAdmissionApplicationSourceModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosAdmissionApplicationSourceAttribute() {
+    public function getEthosAdmissionApplicationSourceAttribute()
+    {
         return $this->ethosAdmissionApplicationSource();
     }
 

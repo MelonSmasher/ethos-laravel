@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosFloorCharacteristicModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosFloorCharacteristic']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosFloorCharacteristicModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosFloorCharacteristicAttribute() {
+    public function getEthosFloorCharacteristicAttribute()
+    {
         return $this->ethosFloorCharacteristic();
     }
 

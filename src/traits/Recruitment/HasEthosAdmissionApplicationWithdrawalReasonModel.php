@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosAdmissionApplicationWithdrawalReasonModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosAdmissionApplicationWithdrawalReason']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosAdmissionApplicationWithdrawalReasonModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosAdmissionApplicationWithdrawalReasonAttribute() {
+    public function getEthosAdmissionApplicationWithdrawalReasonAttribute()
+    {
         return $this->ethosAdmissionApplicationWithdrawalReason();
     }
 

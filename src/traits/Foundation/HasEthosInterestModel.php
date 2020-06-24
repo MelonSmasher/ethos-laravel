@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosInterestModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosInterest']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosInterestModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosInterestAttribute() {
+    public function getEthosInterestAttribute()
+    {
         return $this->ethosInterest();
     }
 

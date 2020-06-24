@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosVisaTypeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosVisaType']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosVisaTypeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosVisaTypeAttribute() {
+    public function getEthosVisaTypeAttribute()
+    {
         return $this->ethosVisaType();
     }
 

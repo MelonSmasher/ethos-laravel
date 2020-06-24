@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosTaxFormComponentModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosTaxFormComponent']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosTaxFormComponentModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosTaxFormComponentAttribute() {
+    public function getEthosTaxFormComponentAttribute()
+    {
         return $this->ethosTaxFormComponent();
     }
 

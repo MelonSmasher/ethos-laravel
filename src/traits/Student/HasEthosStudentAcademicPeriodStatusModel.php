@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosStudentAcademicPeriodStatusModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosStudentAcademicPeriodStatus']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosStudentAcademicPeriodStatusModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosStudentAcademicPeriodStatusAttribute() {
+    public function getEthosStudentAcademicPeriodStatusAttribute()
+    {
         return $this->ethosStudentAcademicPeriodStatus();
     }
 

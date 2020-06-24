@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosInstitutionJobModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosInstitutionJob']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosInstitutionJobModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosInstitutionJobAttribute() {
+    public function getEthosInstitutionJobAttribute()
+    {
         return $this->ethosInstitutionJob();
     }
 

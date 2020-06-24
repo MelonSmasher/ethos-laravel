@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosInstructorStaffTypeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosInstructorStaffType']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosInstructorStaffTypeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosInstructorStaffTypeAttribute() {
+    public function getEthosInstructorStaffTypeAttribute()
+    {
         return $this->ethosInstructorStaffType();
     }
 

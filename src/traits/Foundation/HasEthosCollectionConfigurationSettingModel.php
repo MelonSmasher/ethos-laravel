@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosCollectionConfigurationSettingModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosCollectionConfigurationSetting']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosCollectionConfigurationSettingModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosCollectionConfigurationSettingAttribute() {
+    public function getEthosCollectionConfigurationSettingAttribute()
+    {
         return $this->ethosCollectionConfigurationSetting();
     }
 

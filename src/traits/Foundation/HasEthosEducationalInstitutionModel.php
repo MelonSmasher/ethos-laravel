@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosEducationalInstitutionModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosEducationalInstitution']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosEducationalInstitutionModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosEducationalInstitutionAttribute() {
+    public function getEthosEducationalInstitutionAttribute()
+    {
         return $this->ethosEducationalInstitution();
     }
 

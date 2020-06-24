@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosInstructorTenureTypeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosInstructorTenureType']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosInstructorTenureTypeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosInstructorTenureTypeAttribute() {
+    public function getEthosInstructorTenureTypeAttribute()
+    {
         return $this->ethosInstructorTenureType();
     }
 

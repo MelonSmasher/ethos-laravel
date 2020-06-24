@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosEducationalGoalModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosEducationalGoal']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosEducationalGoalModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosEducationalGoalAttribute() {
+    public function getEthosEducationalGoalAttribute()
+    {
         return $this->ethosEducationalGoal();
     }
 

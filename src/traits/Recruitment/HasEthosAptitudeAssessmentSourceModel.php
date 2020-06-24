@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosAptitudeAssessmentSourceModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosAptitudeAssessmentSource']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosAptitudeAssessmentSourceModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosAptitudeAssessmentSourceAttribute() {
+    public function getEthosAptitudeAssessmentSourceAttribute()
+    {
         return $this->ethosAptitudeAssessmentSource();
     }
 

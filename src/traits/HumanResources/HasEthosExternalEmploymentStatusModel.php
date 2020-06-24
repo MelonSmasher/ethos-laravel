@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosExternalEmploymentStatusModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosExternalEmploymentStatus']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosExternalEmploymentStatusModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosExternalEmploymentStatusAttribute() {
+    public function getEthosExternalEmploymentStatusAttribute()
+    {
         return $this->ethosExternalEmploymentStatus();
     }
 

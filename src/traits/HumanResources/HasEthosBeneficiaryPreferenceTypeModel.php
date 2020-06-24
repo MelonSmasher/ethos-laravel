@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosBeneficiaryPreferenceTypeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosBeneficiaryPreferenceType']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosBeneficiaryPreferenceTypeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosBeneficiaryPreferenceTypeAttribute() {
+    public function getEthosBeneficiaryPreferenceTypeAttribute()
+    {
         return $this->ethosBeneficiaryPreferenceType();
     }
 

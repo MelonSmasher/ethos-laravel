@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosSectionGradeTypeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosSectionGradeType']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosSectionGradeTypeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosSectionGradeTypeAttribute() {
+    public function getEthosSectionGradeTypeAttribute()
+    {
         return $this->ethosSectionGradeType();
     }
 

@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosEmergencyContactPhoneAvailabilityModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosEmergencyContactPhoneAvailability']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosEmergencyContactPhoneAvailabilityModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosEmergencyContactPhoneAvailabilityAttribute() {
+    public function getEthosEmergencyContactPhoneAvailabilityAttribute()
+    {
         return $this->ethosEmergencyContactPhoneAvailability();
     }
 

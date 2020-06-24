@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosGradeDefinitionsMaximumModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosGradeDefinitionsMaximum']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosGradeDefinitionsMaximumModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosGradeDefinitionsMaximumAttribute() {
+    public function getEthosGradeDefinitionsMaximumAttribute()
+    {
         return $this->ethosGradeDefinitionsMaximum();
     }
 

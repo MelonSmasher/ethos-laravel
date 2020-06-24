@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosGeographicAreaTypeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosGeographicAreaType']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosGeographicAreaTypeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosGeographicAreaTypeAttribute() {
+    public function getEthosGeographicAreaTypeAttribute()
+    {
         return $this->ethosGeographicAreaType();
     }
 

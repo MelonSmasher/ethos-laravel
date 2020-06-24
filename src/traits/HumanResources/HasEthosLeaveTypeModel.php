@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosLeaveTypeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosLeaveType']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosLeaveTypeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosLeaveTypeAttribute() {
+    public function getEthosLeaveTypeAttribute()
+    {
         return $this->ethosLeaveType();
     }
 

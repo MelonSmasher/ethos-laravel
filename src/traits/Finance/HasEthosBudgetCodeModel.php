@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosBudgetCodeModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosBudgetCode']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosBudgetCodeModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosBudgetCodeAttribute() {
+    public function getEthosBudgetCodeAttribute()
+    {
         return $this->ethosBudgetCode();
     }
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e47e396a11b0b5e6efb6beb962825e4",
+    "content-hash": "1fd6d7367bd362800b5856145197b457",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -197,16 +197,16 @@
         },
         {
             "name": "melonsmasher/ethos-php",
-            "version": "v0.0.5",
+            "version": "v0.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MelonSmasher/ethos-php.git",
-                "reference": "869fac1b761a3b77cc616eb36422b7145c470f50"
+                "reference": "ef35fde1d66ed2152dfdb271fd69f5cf5226dd1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MelonSmasher/ethos-php/zipball/869fac1b761a3b77cc616eb36422b7145c470f50",
-                "reference": "869fac1b761a3b77cc616eb36422b7145c470f50",
+                "url": "https://api.github.com/repos/MelonSmasher/ethos-php/zipball/ef35fde1d66ed2152dfdb271fd69f5cf5226dd1c",
+                "reference": "ef35fde1d66ed2152dfdb271fd69f5cf5226dd1c",
                 "shasum": ""
             },
             "require": {
@@ -251,7 +251,7 @@
                 "ethos",
                 "higher-ed"
             ],
-            "time": "2020-06-23T19:40:29+00:00"
+            "time": "2020-06-24T17:55:26+00:00"
         },
         {
             "name": "myclabs/php-enum",

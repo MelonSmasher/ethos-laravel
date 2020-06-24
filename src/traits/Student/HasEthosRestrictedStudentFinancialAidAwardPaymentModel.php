@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosRestrictedStudentFinancialAidAwardPaymentModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosRestrictedStudentFinancialAidAwardPayment']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosRestrictedStudentFinancialAidAwardPaymentModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosRestrictedStudentFinancialAidAwardPaymentAttribute() {
+    public function getEthosRestrictedStudentFinancialAidAwardPaymentAttribute()
+    {
         return $this->ethosRestrictedStudentFinancialAidAwardPayment();
     }
 

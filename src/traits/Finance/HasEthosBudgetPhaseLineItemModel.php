@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosBudgetPhaseLineItemModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosBudgetPhaseLineItem']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosBudgetPhaseLineItemModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosBudgetPhaseLineItemAttribute() {
+    public function getEthosBudgetPhaseLineItemAttribute()
+    {
         return $this->ethosBudgetPhaseLineItem();
     }
 

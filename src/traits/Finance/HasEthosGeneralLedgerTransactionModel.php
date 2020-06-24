@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosGeneralLedgerTransactionModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosGeneralLedgerTransaction']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosGeneralLedgerTransactionModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosGeneralLedgerTransactionAttribute() {
+    public function getEthosGeneralLedgerTransactionAttribute()
+    {
         return $this->ethosGeneralLedgerTransaction();
     }
 

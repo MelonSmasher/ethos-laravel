@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosShippingMethodModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosShippingMethod']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosShippingMethodModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosShippingMethodAttribute() {
+    public function getEthosShippingMethodAttribute()
+    {
         return $this->ethosShippingMethod();
     }
 

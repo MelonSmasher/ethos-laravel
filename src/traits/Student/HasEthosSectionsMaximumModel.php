@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosSectionsMaximumModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosSectionsMaximum']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosSectionsMaximumModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosSectionsMaximumAttribute() {
+    public function getEthosSectionsMaximumAttribute()
+    {
         return $this->ethosSectionsMaximum();
     }
 

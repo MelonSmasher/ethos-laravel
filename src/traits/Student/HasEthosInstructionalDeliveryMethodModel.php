@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosInstructionalDeliveryMethodModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosInstructionalDeliveryMethod']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosInstructionalDeliveryMethodModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosInstructionalDeliveryMethodAttribute() {
+    public function getEthosInstructionalDeliveryMethodAttribute()
+    {
         return $this->ethosInstructionalDeliveryMethod();
     }
 

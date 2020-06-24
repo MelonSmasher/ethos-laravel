@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosProspectOpportunitiesSubmissionModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosProspectOpportunitiesSubmission']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosProspectOpportunitiesSubmissionModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosProspectOpportunitiesSubmissionAttribute() {
+    public function getEthosProspectOpportunitiesSubmissionAttribute()
+    {
         return $this->ethosProspectOpportunitiesSubmission();
     }
 

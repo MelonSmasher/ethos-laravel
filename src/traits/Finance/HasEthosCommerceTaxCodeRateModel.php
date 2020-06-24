@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosCommerceTaxCodeRateModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosCommerceTaxCodeRate']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosCommerceTaxCodeRateModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosCommerceTaxCodeRateAttribute() {
+    public function getEthosCommerceTaxCodeRateAttribute()
+    {
         return $this->ethosCommerceTaxCodeRate();
     }
 

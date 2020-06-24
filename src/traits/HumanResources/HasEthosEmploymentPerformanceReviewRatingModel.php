@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosEmploymentPerformanceReviewRatingModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosEmploymentPerformanceReviewRating']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosEmploymentPerformanceReviewRatingModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosEmploymentPerformanceReviewRatingAttribute() {
+    public function getEthosEmploymentPerformanceReviewRatingAttribute()
+    {
         return $this->ethosEmploymentPerformanceReviewRating();
     }
 

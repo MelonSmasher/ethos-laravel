@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosVendorContactModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosVendorContact']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosVendorContactModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosVendorContactAttribute() {
+    public function getEthosVendorContactAttribute()
+    {
         return $this->ethosVendorContact();
     }
 

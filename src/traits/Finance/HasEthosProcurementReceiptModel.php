@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosProcurementReceiptModel
 {
     /**
-     * HasEthosAccountFundsAvailableModel constructor.
-     */
-    public function __construct()
-    {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosProcurementReceipt']));
-        return parent::__construct();
-    }
-
-    /**
      * Get Attribute
      *
      * Returns the attribute object.
@@ -35,7 +26,8 @@ trait HasEthosProcurementReceiptModel
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getEthosProcurementReceiptAttribute() {
+    public function getEthosProcurementReceiptAttribute()
+    {
         return $this->ethosProcurementReceipt();
     }
 

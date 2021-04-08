@@ -32,9 +32,12 @@ Complete API docs can be [found here](https://melonsmasher.github.io/ethos-larav
 * Ethos settings are read from `.env`.
   
 * Ethos sessions are cached.
+  
 * Efficiently handles authentication.
     *  New authenticated sessions are created before the previous session expires.
+  
 * Traits for `316` Ethos data models, related by using the Ethos object ID.
+  
 * Trait model responses can be cached for a configurable amount of time.
 
 ## Config Options

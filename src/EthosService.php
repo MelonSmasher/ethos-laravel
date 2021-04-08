@@ -71,13 +71,9 @@ class EthosService
      */
     private function validate($val, $default, $json = false)
     {
-        if (!is_null($val)) {
-            if ($json) {
-                return json_decode($val, true);
-            }
-            return $val;
-        }
-        return $default;
+        if ($val === null) return $default;
+        if ($json) return json_decode($val, true);
+        return $val;
     }
 
     /**

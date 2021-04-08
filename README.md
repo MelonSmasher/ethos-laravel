@@ -30,6 +30,7 @@ Complete API docs can be [found here](https://melonsmasher.github.io/ethos-larav
 ## Features
 
 * Ethos settings are read from `.env`.
+  
 * Ethos sessions are cached.
 * Efficiently handles authentication.
     *  New authenticated sessions are created before the previous session expires.

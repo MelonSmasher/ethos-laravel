@@ -1,6 +1,7 @@
 # ethos-laravel
 
-Ellucian Ethos client library, built upon [MelonSmasher/ethos-php](https://github.com/MelonSmasher/ethos-php), with enhancements for Laravel.
+Ellucian Ethos client library, built upon [MelonSmasher/ethos-php](https://github.com/MelonSmasher/ethos-php), with
+enhancements for Laravel.
 
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://raw.githubusercontent.com/MelonSmasher/ethos-laravel/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/MelonSmasher/ethos-laravel)](https://github.com/MelonSmasher/ethos-laravel/issues)
@@ -30,14 +31,14 @@ Complete API docs can be [found here](https://melonsmasher.github.io/ethos-larav
 ## Features
 
 * Ethos settings are read from `.env`.
-  
+
 * Ethos sessions are cached.
-  
+
 * Efficiently handles authentication.
-    *  New authenticated sessions are created before the previous session expires.
-  
+    * New authenticated sessions are created before the previous session expires.
+
 * Traits for `316` Ethos data models, related by using the Ethos object ID.
-  
+
 * Trait model responses can be cached for a configurable amount of time.
 
 ## Config Options

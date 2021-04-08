@@ -56,7 +56,7 @@ ETHOS_TRAIT_CACHE_TTL=300
 
 ## Usage/Examples
 
-### Using Helper Function:
+### Using Helper Function
 
 ```php
 <?php
@@ -77,7 +77,7 @@ class ExampleController extends Controller
 }
 ```
 
-### Using Facade:
+### Using Facade
 
 ```php
 <?php
@@ -223,4 +223,3 @@ Install composer requirements
 ```bash
 ./composer install
 ```
-

@@ -27,7 +27,9 @@ trait HasEthosPersonModel
      */
     public function initializeAppendEthosPersonAttribute()
     {
+
         $this->append('ethosPerson');
+        $this->appends = array_unique(array_merge($this->appends, ['ethosPerson']));
     }
 
     /**

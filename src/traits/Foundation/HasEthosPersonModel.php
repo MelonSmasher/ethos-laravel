@@ -20,16 +20,10 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosPersonModel
 {
 
-    /**
-     * Initialize Append Ethos Person Attribute
-     *
-     * Appends the ethosPerson attribute to the object
-     */
-    public function initializeAppendEthosPersonAttribute()
+    public function __construct()
     {
-
-        $this->append('ethosPerson');
         $this->appends = array_unique(array_merge($this->appends, ['ethosPerson']));
+        return parent::__construct();
     }
 
     /**

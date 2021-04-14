@@ -21,16 +21,13 @@ trait HasEthosPersonModel
 {
 
     /**
-     * Get Arrayable Appends
+     * Initialize Append Ethos Person Attribute
      *
      * Appends the ethosPerson attribute to the object
-     *
-     * @return mixed
      */
-    protected function getArrayableAppends()
+    public function initializeAppendEthosPersonAttribute()
     {
-        $this->appends = array_unique(array_merge($this->appends, ['ethosPerson']));
-        return parent::getArrayableAppends();
+        $this->append('ethosPerson');
     }
 
     /**

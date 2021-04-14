@@ -4,41 +4,59 @@
 namespace MelonSmasher\EthosPHP\Laravel\Traits\Foundation;
 
 
+use GuzzleHttp\Exception\GuzzleException;
 use MelonSmasher\EthosPHP\Foundation\PersonsClient;
 use Illuminate\Support\Facades\Cache;
 
 /**
-* Trait HasEthosPersonModel
-*
-* Useful on models that have a related Ethos person model. The relation is connected via the `ethos_person_id` attribute.
-*
-* @package MelonSmasher\EthosLaravel\Traits\Foundation
-* @license https://raw.githubusercontent.com/MelonSmasher/ethos-laravel/master/LICENSE MIT
-* @author Alex Markessinis
-*/
+ * Trait HasEthosPersonModel
+ *
+ * Useful on models that have a related Ethos person model. The relation is connected via the `ethos_person_id` attribute.
+ *
+ * @package MelonSmasher\EthosLaravel\Traits\Foundation
+ * @license https://raw.githubusercontent.com/MelonSmasher/ethos-laravel/master/LICENSE MIT
+ * @author Alex Markessinis
+ */
 trait HasEthosPersonModel
 {
+
+    /**
+     * Get Arrayable Appends
+     *
+     * Appends the ethosPerson attribute to the object
+     *
+     * @return mixed
+     */
+    protected function getArrayableAppends()
+    {
+        $this->appends = array_unique(array_merge($this->appends, ['ethosPerson']));
+        return parent::getArrayableAppends();
+    }
+
     /**
      * Get Attribute
      *
      * Returns the attribute object.
      *
      * @return object
-     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getEthosPersonAttribute()
     {
-        return $this->ethosPerson();
+        try {
+            return $this->ethosPerson();
+        } catch (GuzzleException $e) {
+            return (object)[];
+        }
     }
 
     /**
-    * Ethos Model
-    *
-    * The Ethos Model related by the `ethos_person_id`.
-    *
-    * @return object
-    * @throws \GuzzleHttp\Exception\GuzzleException
-    */
+     * Ethos Model
+     *
+     * The Ethos Model related by the `ethos_person_id`.
+     *
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public function ethosPerson()
     {
         if (!empty($this->ethos_person_id)) {

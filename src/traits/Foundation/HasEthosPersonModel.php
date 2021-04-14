@@ -20,11 +20,11 @@ use Illuminate\Support\Facades\Cache;
 trait HasEthosPersonModel
 {
 
-    public function __construct()
+    /*public function __construct()
     {
         $this->appends = array_unique(array_merge($this->appends, ['ethosPerson']));
         return parent::__construct();
-    }
+    }*/
 
     /**
      * Get Attribute

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "958b3ec69483a5061b2d7146bd741de0",
+    "content-hash": "5774aa5a673b877a052fd7d856a3ef71",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -166,16 +166,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.8.1",
+            "version": "1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1"
+                "reference": "dc960a912984efb74d0a90222870c72c87f10c91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/35ea11d335fd638b5882ff1725228b3d35496ab1",
-                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/dc960a912984efb74d0a90222870c72c87f10c91",
+                "reference": "dc960a912984efb74d0a90222870c72c87f10c91",
                 "shasum": ""
             },
             "require": {
@@ -235,22 +235,22 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/1.8.1"
+                "source": "https://github.com/guzzle/psr7/tree/1.8.2"
             },
-            "time": "2021-03-21T16:25:00+00:00"
+            "time": "2021-04-26T09:17:50+00:00"
         },
         {
             "name": "melonsmasher/ethos-php",
-            "version": "v0.1.0",
+            "version": "v0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MelonSmasher/ethos-php.git",
-                "reference": "7cdab628f54a9dfe04db9e566068483c455d2331"
+                "reference": "eba8ef63ec73425c757a236f7a5b5f0826449259"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MelonSmasher/ethos-php/zipball/7cdab628f54a9dfe04db9e566068483c455d2331",
-                "reference": "7cdab628f54a9dfe04db9e566068483c455d2331",
+                "url": "https://api.github.com/repos/MelonSmasher/ethos-php/zipball/eba8ef63ec73425c757a236f7a5b5f0826449259",
+                "reference": "eba8ef63ec73425c757a236f7a5b5f0826449259",
                 "shasum": ""
             },
             "require": {
@@ -270,7 +270,9 @@
                     "MelonSmasher\\EthosPHP\\HumanResources\\": "src/HumanResources/",
                     "MelonSmasher\\EthosPHP\\Recruitment\\": "src/Recruitment/",
                     "MelonSmasher\\EthosPHP\\Student\\": "src/Student/",
-                    "MelonSmasher\\EthosPHP\\Util\\": "src/Util/"
+                    "MelonSmasher\\EthosPHP\\Util\\": "src/Util/",
+                    "MelonSmasher\\EthosPHP\\Exception\\": "src/Exception/",
+                    "MelonSmasher\\EthosPHP\\Subscriptions\\": "src/Subscriptions/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -299,7 +301,7 @@
                 "issues": "https://github.com/MelonSmasher/ethos-php/issues",
                 "source": "https://github.com/MelonSmasher/ethos-php"
             },
-            "time": "2021-04-08T15:07:44+00:00"
+            "time": "2021-04-29T16:20:10+00:00"
         },
         {
             "name": "myclabs/php-enum",
